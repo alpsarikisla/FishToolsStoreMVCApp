@@ -1,0 +1,57 @@
+﻿body {
+    font-family: Calibri;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: white;
+    height: 98vh;
+}
+
+    .sidebar h2 {
+        text-align: center;
+    }
+
+    .sidebar ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+
+            .sidebar ul li a {
+                color: white;
+                text-decoration: none;
+                display: block;
+                padding: 10px 20px;
+                background-color: #444;
+            }
+
+                .sidebar ul li a:hover {
+                    background-color: #555;
+                }
+
+.main-content {
+    flex-grow: 1;
+}
+
+    .main-content h1 {
+        margin-top: 0;
+    }
+.breadCrumb{
+    padding:10px;
+    background-color:#f8f8f8;
+}
+    .breadCrumb a {
+        color: #059669;
+        text-decoration: none;
+    }
+    .pageContent {
+        padding: 20px;
+    }

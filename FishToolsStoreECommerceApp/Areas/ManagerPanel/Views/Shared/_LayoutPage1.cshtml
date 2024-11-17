@@ -4,10 +4,28 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+    <link href="~/Areas/ManagerPanel/Assets/css/MainStyle.css" rel="stylesheet" />
 </head>
 <body>
-    <div>
+    <div class="sidebar">
+        <h2>Yönetim Paneli</h2>
+        <div class="userPanel">
+
+        </div>
+        <ul>
+            <li><a href="@Url.Action("Index","Home")">Anasayfa</a></li>
+            <li><a href="#users">Kategori İşlemleri</a></li>
+            <li><a href="#settings">Marka İşlemleri</a></li>
+            <li><a href="#logout">Ürün İşlemleri</a></li>
+            <li><a href="#logout">Üye İşlemleri</a></li>
+            <li><a href="#logout">Sipariş İşlemleri</a></li>
+            <li><a href="#logout">Satış İşlemleri</a></li>
+            <li><a href="#logout">Çıkış</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
         @RenderBody()
     </div>
 </body>
+
 </html>

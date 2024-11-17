@@ -53,7 +53,7 @@ operates as your consent to these practices.
 b.	Processing of Personal Data. To the extent Microsoft is a processor or subprocessor of
 personal data in connection with the software, Microsoft makes the commitments in the
 European Union General Data Protection Regulation Terms of the Online Services Terms to all
-customers effective May 25, 2018, at http://go.microsoft.com/?linkid=9840733.
+customers effective May 25, 2018, at https://aka.ms/aspnet/gdpr.
 5.	SCOPE OF LICENSE. The software is licensed, not sold. This agreement only gives you some rights
 to use the software. Microsoft reserves all other rights. Unless applicable law gives you more rights
 despite this limitation, you may use the software only as expressly permitted in this agreement. In
@@ -123,5 +123,3 @@ applicable law.
 It also applies even if Microsoft knew or should have known about the possibility of the damages.
 The above limitation or exclusion may not apply to you because your state or country may not allow
 the exclusion or limitation of incidental, consequential or other damages.
-Please note: As this software is distributed in Quebec, Canada, some of the clauses in this
-agreement are provided below in French.
