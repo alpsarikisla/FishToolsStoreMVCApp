@@ -1,4 +1,4 @@
-﻿
+﻿@model FishToolsStoreECommerceApp.Areas.ManagerPanel.Data.ViewModels.ManagerLoginViewModel
 @{
     Layout = null;
 }
@@ -8,11 +8,36 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>Fish Tools Yönetici Giriş</title>
+    <link href="~/Areas/ManagerPanel/Assets/css/LoginStyle.css" rel="stylesheet" />
 </head>
 <body>
-    <div> 
-
+    <div class="panelContainer"> 
+        <div class="title">
+            <h1>Yönetici Giriş</h1>
+        </div>
+        <div>
+            @using (Html.BeginForm())
+            {
+                @Html.ValidationSummary();
+                if (ViewBag.warning!=null)
+                {
+                    <div class="validation-summary-errors">
+                        <div>@ViewBag.warning</div>
+                    </div>
+                }
+                <div class="row">
+                    @Html.EditorFor(x => x.Mail, new { htmlAttributes = new { @class = "input rounded", @placeholder = "Mail Adresiniz" } })
+                    
+                </div>
+                <div class="row">
+                    @Html.EditorFor(x => x.Password, new { htmlAttributes = new { @class = "input rounded", @placeholder = "Şifreniz" } })
+                </div>
+                <div class="row">
+                    <input type="submit" class="button rounded" />
+                </div>
+            }
+        </div>
     </div>
 </body>
 </html>

@@ -1,9 +1,52 @@
 ﻿body {
     background-color: #DDDDDD;
+    font-family:Calibri;
 }
-.button {
-    background-color: #059669;
+.panelContainer {
+    width: 400px;
+    padding:100px 20px;
+    margin:150px auto;
+    background-color:white;
+}
+.title {
+    height: 70px;
+    text-align:center;
+}
+.row {
+    padding:15px 0;
 }
 .input {
     background-color: #EFEFEF;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding:15px 7px;
+    border:none;
 }
+.button {
+    background-color: #059669;
+    width:100%;
+    color:white;
+    padding:15px;
+    border:none;
+}
+.rounded{
+    border-radius:5px;
+}
+.validation-summary-errors {
+    padding: 1px;
+    background-color: #f52f2f;
+    color: white;
+    border-radius: 5px;
+    font-weight:900;
+}
+    .validation-summary-errors div{
+        padding:20px;
+    }
+    .validation-summary-errors ul {
+        list-style-type: none;
+    }
+    .validation-summary-errors ul li {
+        margin-bottom:5px;
+    }
