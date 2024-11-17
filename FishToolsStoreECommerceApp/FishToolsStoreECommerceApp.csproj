@@ -97,11 +97,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\ManagerPanel\Assets\css\LoginStyle.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\ManagerPanel\Controllers\HomeController.cs" />
+    <Compile Include="Areas\ManagerPanel\Controllers\LoginController.cs" />
+    <Compile Include="Areas\ManagerPanel\ManagerPanelAreaRegistration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -116,6 +120,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
+    <Content Include="Areas\ManagerPanel\Views\web.config" />
+    <Content Include="Areas\ManagerPanel\Views\Shared\_LayoutPage1.cshtml" />
+    <Content Include="Areas\ManagerPanel\Views\Home\Index.cshtml" />
+    <Content Include="Areas\ManagerPanel\Views\Login\Index.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -126,6 +134,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\ManagerPanel\Data\" />
     <Folder Include="Controllers\" />
   </ItemGroup>
   <PropertyGroup>
