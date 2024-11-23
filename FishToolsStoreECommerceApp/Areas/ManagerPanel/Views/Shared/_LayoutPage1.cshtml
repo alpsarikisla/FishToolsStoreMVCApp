@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     <link href="~/Areas/ManagerPanel/Assets/css/MainStyle.css" rel="stylesheet" />
+    @RenderSection("styles", false)
 </head>
 <body>
     <div class="sidebar">
@@ -15,7 +16,7 @@
         <ul>
             <li><a href="@Url.Action("Index","Home")">Anasayfa</a></li>
             <li><a href="#users">Kategori İşlemleri</a></li>
-            <li><a href="#settings">Marka İşlemleri</a></li>
+            <li><a href="@Url.Action("Index","Brand")">Marka İşlemleri</a></li>
             <li><a href="#logout">Ürün İşlemleri</a></li>
             <li><a href="#logout">Üye İşlemleri</a></li>
             <li><a href="#logout">Sipariş İşlemleri</a></li>

@@ -1,0 +1,74 @@
+﻿.pageContent {
+}
+
+.pagetitle {
+    border: 1px solid silver;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    background-color: #f3f3f3;
+    padding: 0 20px;
+}
+
+    .pagetitle h2 {
+        float: left;
+    }
+
+    .pagetitle a {
+        background-color: #059669;
+        color: white;
+        padding: 7px 30px;
+        border: none;
+        border-radius: 7px;
+        text-decoration: none;
+        float: right;
+        margin:18px;
+    }
+        .pagetitle a:hover {
+            background-color: #06ca8d;
+        }
+
+.tableContent {
+    border:1px solid silver;
+}
+
+.table {
+    width: 100%;
+    border-spacing: 0px;
+}
+    .table tr th {
+        padding: 10px;
+        border-bottom: 1px solid Silver;
+        text-align: left;
+        border-left: 1px solid silver;
+    }
+
+        .table tr td {
+            padding: 10px;
+            border-top: 1px solid Silver;
+            border-left: 1px solid silver;
+        }
+.btnedit
+{
+   padding:5px;
+   border-radius:3px;
+   background-color:#059669;
+   color:white;
+   text-decoration:none;
+   font-size:9pt;
+}
+.btndetail {
+    padding: 5px;
+    border-radius: 3px;
+    background-color: #3f3df3;
+    color: white;
+    text-decoration: none;
+    font-size: 9pt;
+}
+.btndelete {
+    padding: 5px;
+    border-radius: 3px;
+    background-color: #ff0000;
+    color: white;
+    text-decoration: none;
+    font-size: 9pt;
+}

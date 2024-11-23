@@ -1,0 +1,45 @@
+﻿.pageContent {
+}
+
+.pagetitle {
+    border: 1px solid silver;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    background-color: #f3f3f3;
+    padding: 0 20px;
+}
+.formContent {
+    border: 1px solid silver;
+    padding:20px;
+}
+.row
+{
+    padding:7px 0;
+}
+.control-label {
+    display:block;
+}
+.form-control {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.text-danger
+{
+
+}
+.btn-default {
+    background-color: #059669;
+    color: white;
+    padding: 10px 60px;
+    border: none;
+}
+.formfooter {
+    background-color:#f8f8f8;
+    padding:10px 20px;
+    border: 1px solid silver;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}

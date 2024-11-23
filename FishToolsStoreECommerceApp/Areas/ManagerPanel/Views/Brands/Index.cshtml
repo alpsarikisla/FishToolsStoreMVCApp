@@ -1,0 +1,66 @@
+﻿@model IEnumerable<FishToolsStoreECommerceApp.Models.Brand>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/ManagerPanel/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="breadCrumb">
+    <a href="@Url.Action("Index", "Home")">Anasayfa</a> >
+    @*<a href="@Url.Action("Index", "Brands")">Markalar</a>*@
+    <label>Markalar</label>
+</div>
+
+<div class="pageContent">
+    <div class="pagetitle">
+        @Html.ActionLink("Marka Oluştur", "Create")
+        <h2>Markalar Listesi</h2>
+        <div style="clear:both"></div>
+    </div>
+    <div class="tableContent">
+        <table class="table">
+            <tr>
+                <th style="border-left:none">
+                    Marka No
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IsActive)
+                </th>
+                <th>Seçenekler</th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td style="border-left:none">@item.ID</td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @if (item.IsActive)
+                        {
+                            <label>Aktif</label>
+                        }
+                        else
+                        {
+                            <label>Pasif</label>
+                        }
+                    </td>
+                    <td>
+                        <a href="@Url.Action("Edit","Brands", new {id=item.ID})" class="btnedit">Düzenle</a>
+                        <a href="@Url.Action("Details","Brands", new {id=item.ID})" class="btndetail">Detay</a>
+                        <a href="@Url.Action("Delete","Brands", new {id=item.ID})" class="btndelete">Sil</a>
+                    </td>
+                </tr>
+            }
+        </table>
+
+    </div>
+</div>
+@section styles
+{
+    <link href="~/Areas/ManagerPanel/Assets/css/TableStyle.css" rel="stylesheet" />
+}
