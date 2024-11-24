@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "NotFound";
+    Layout = "~/Areas/ManagerPanel/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+<div class="breadCrumb">
+    <a href="@Url.Action("Index", "Home")">Anasayfa</a> >
+    <label>Sistem Mesajı</label>
+</div>
+<div class="pageContent">
+    <div class="pagetitle">
+        <h2>Sayfa Bulunamadı</h2>
+    </div>
+    <div class="formContent" style="text-align:center">
+        <img src="~/Areas/ManagerPanel/Assets/PageImages/http-404-not-found-error-dosya-bulunamadi-mesaji.jpg" width="500" />
+    </div>
+    <div class="formfooter">
+        <a href="@Url.Action("Index","Home")">Anasayfaya dön</a>
+    </div>
+</div>
+@section styles
+{
+    <link href="~/Areas/ManagerPanel/Assets/css/FormStyle.css" rel="stylesheet" />
+}

@@ -28,13 +28,16 @@
 }
 .text-danger
 {
-
+    color:darkred;
 }
 .btn-default {
     background-color: #059669;
     color: white;
     padding: 10px 60px;
     border: none;
+}
+.btn-default:hover {
+    background-color: #03bb82;
 }
 .formfooter {
     background-color:#f8f8f8;

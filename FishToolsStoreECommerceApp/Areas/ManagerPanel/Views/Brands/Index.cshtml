@@ -51,13 +51,16 @@
                     </td>
                     <td>
                         <a href="@Url.Action("Edit","Brands", new {id=item.ID})" class="btnedit">Düzenle</a>
-                        <a href="@Url.Action("Details","Brands", new {id=item.ID})" class="btndetail">Detay</a>
+                        @*<a href="@Url.Action("Details","Brands", new {id=item.ID})" class="btndetail">Detay</a>*@
                         <a href="@Url.Action("Delete","Brands", new {id=item.ID})" class="btndelete">Sil</a>
                     </td>
                 </tr>
             }
         </table>
 
+    </div>
+    <div class="tablefooter">
+        <a href="@Url.Action("AllIndex","Brands")">Tüm Markaları Listele</a>
     </div>
 </div>
 @section styles

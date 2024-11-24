@@ -101,6 +101,7 @@
     <Content Include="Areas\ManagerPanel\Assets\css\LoginStyle.css" />
     <Content Include="Areas\ManagerPanel\Assets\css\MainStyle.css" />
     <Content Include="Areas\ManagerPanel\Assets\css\TableStyle.css" />
+    <Content Include="Areas\ManagerPanel\Assets\PageImages\http-404-not-found-error-dosya-bulunamadi-mesaji.jpg" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -110,6 +111,8 @@
     <Compile Include="Areas\ManagerPanel\Controllers\CategoryController.cs" />
     <Compile Include="Areas\ManagerPanel\Controllers\HomeController.cs" />
     <Compile Include="Areas\ManagerPanel\Controllers\LoginController.cs" />
+    <Compile Include="Areas\ManagerPanel\Controllers\ProductController.cs" />
+    <Compile Include="Areas\ManagerPanel\Controllers\SystemMessagesController.cs" />
     <Compile Include="Areas\ManagerPanel\Data\ViewModels\ManagerLoginViewModel.cs" />
     <Compile Include="Areas\ManagerPanel\ManagerPanelAreaRegistration.cs" />
     <Compile Include="Global.asax.cs">
@@ -132,9 +135,12 @@
     <Content Include="Areas\ManagerPanel\Views\Login\Index.cshtml" />
     <Content Include="Areas\ManagerPanel\Views\Brands\Create.cshtml" />
     <Content Include="Areas\ManagerPanel\Views\Brands\Delete.cshtml" />
-    <Content Include="Areas\ManagerPanel\Views\Brands\Details.cshtml" />
     <Content Include="Areas\ManagerPanel\Views\Brands\Edit.cshtml" />
     <Content Include="Areas\ManagerPanel\Views\Brands\Index.cshtml" />
+    <Content Include="Areas\ManagerPanel\Views\SystemMessages\NotFound.cshtml" />
+    <Content Include="Areas\ManagerPanel\Views\Brands\AllIndex.cshtml" />
+    <Content Include="Areas\ManagerPanel\Views\Product\Index.cshtml" />
+    <Content Include="Areas\ManagerPanel\Views\Product\Create.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

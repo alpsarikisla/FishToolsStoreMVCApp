@@ -72,3 +72,10 @@
     text-decoration: none;
     font-size: 9pt;
 }
+.tablefooter {
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    border: 1px solid silver;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
