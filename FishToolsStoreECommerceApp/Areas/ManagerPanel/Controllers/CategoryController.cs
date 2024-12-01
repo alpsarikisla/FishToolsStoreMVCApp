@@ -6,10 +6,12 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using FishToolsStoreECommerceApp.Areas.ManagerPanel.Filters;
 using FishToolsStoreECommerceApp.Models;
 
 namespace FishToolsStoreECommerceApp.Areas.ManagerPanel.Controllers
 {
+    [ManagerAuthorizationFilter]
     public class CategoryController : Controller
     {
         private FishToolsStoreModel db = new FishToolsStoreModel();

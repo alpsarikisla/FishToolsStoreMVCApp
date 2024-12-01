@@ -102,6 +102,7 @@
     <Content Include="Areas\ManagerPanel\Assets\css\MainStyle.css" />
     <Content Include="Areas\ManagerPanel\Assets\css\TableStyle.css" />
     <Content Include="Areas\ManagerPanel\Assets\PageImages\http-404-not-found-error-dosya-bulunamadi-mesaji.jpg" />
+    <Content Include="Areas\ManagerPanel\Assets\PageImages\User-Avatar-Profile-Clip-Art-Transparent-PNG.png" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -114,6 +115,7 @@
     <Compile Include="Areas\ManagerPanel\Controllers\ProductController.cs" />
     <Compile Include="Areas\ManagerPanel\Controllers\SystemMessagesController.cs" />
     <Compile Include="Areas\ManagerPanel\Data\ViewModels\ManagerLoginViewModel.cs" />
+    <Compile Include="Areas\ManagerPanel\Filters\ManagerAuthorizationFilterAttribute.cs" />
     <Compile Include="Areas\ManagerPanel\ManagerPanelAreaRegistration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

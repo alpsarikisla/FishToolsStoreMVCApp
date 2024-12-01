@@ -41,5 +41,10 @@ namespace FishToolsStoreECommerceApp.Areas.ManagerPanel.Controllers
             }
             return View(model);
         }
+        public ActionResult Logout()
+        {
+            Session["manager"] = null;
+            return RedirectToAction("Index", "Login");
+        }
     }
 }
