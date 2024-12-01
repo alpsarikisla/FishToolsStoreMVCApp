@@ -12,6 +12,14 @@
     border: 1px solid silver;
     padding:20px;
 }
+.formContent .left{
+    float:left;
+    width:45%;
+}
+    .formContent .right {
+        float: right;
+        width: 45%;
+    }
 .row
 {
     padding:7px 0;

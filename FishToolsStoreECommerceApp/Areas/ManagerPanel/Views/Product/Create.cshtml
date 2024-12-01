@@ -1,8 +1,92 @@
-﻿
+﻿@model FishToolsStoreECommerceApp.Models.Product
 @{
     ViewBag.Title = "Create";
     Layout = "~/Areas/ManagerPanel/Views/Shared/_LayoutPage1.cshtml";
 }
 
-<h2>Create</h2>
+
+<div class="breadCrumb">
+    <a href="@Url.Action("Index", "Home")">Anasayfa</a> >
+    <a href="@Url.Action("Index", "Products")">Ürünler</a> >
+    <label>Ürün ekle</label>
+</div>
+
+<div class="pageContent">
+    <div class="pagetitle">
+        <h2>Ürün Ekle</h2>
+    </div>
+    <div class="formContent">
+        @using (Html.BeginForm("Create","Product", FormMethod.Post, new {enctype="multipart/form-data"}))
+        {
+            @Html.AntiForgeryToken()
+            <div class="left">
+                <div class="row">
+                    @Html.LabelFor(model => model.Category, htmlAttributes: new { @class = "control-label" })
+                    @Html.DropDownList("Category_ID", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Category_ID, "", new { @class = "text-danger" })
+                </div>
+                <div class="row">
+                    @Html.LabelFor(model => model.Brand, htmlAttributes: new { @class = "control-label" })
+                    @Html.DropDownList("Brand_ID", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Brand_ID, "", new { @class = "text-danger" })
+                </div>
+                <div class="row">
+                    @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                </div>
+                <div class="row">
+                    @Html.LabelFor(model => model.Barcode, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.Barcode, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Barcode, "", new { @class = "text-danger" })
+                </div>
+                <div class="row">
+                    @Html.LabelFor(model => model.IsActive, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.IsActive) Aktif Ürün
+                    @Html.ValidationMessageFor(model => model.IsActive, "", new { @class = "text-danger" })
+                </div>
+                <div class="row">
+                    <input type="submit" value="Ürün Ekle" class="btn-default" />
+                </div>
+            </div>
+            <div class="right">
+                <div class="row">
+                    @Html.LabelFor(model => model.Stock, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.Stock, new { htmlAttributes = new { @class = "form-control", @Value = "0" } })
+                    @Html.ValidationMessageFor(model => model.Stock, "", new { @class = "text-danger" })
+                </div>
+                <div class="row">
+                    @Html.LabelFor(model => model.ReorderLevel, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.ReorderLevel, new { htmlAttributes = new { @class = "form-control", @Value = "0" } })
+                    @Html.ValidationMessageFor(model => model.ReorderLevel, "", new { @class = "text-danger" })
+                </div>
+                <div class="row">
+                    @Html.LabelFor(model => model.Price, htmlAttributes: new { @class = "control-label"})
+                    @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control", @Value = "0" } })
+                    @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+                </div>
+                <div class="row">
+                    @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                </div>
+                <div class="row">
+                    @Html.LabelFor(model => model.Image, htmlAttributes: new { @class = "control-label" })
+                    <input type="file" name="productImage" class="form-control" />
+                    @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div style="clear:both"></div>
+        }
+
+    </div>
+    <div class="formfooter">
+        @Html.ActionLink("Ürünler Listesine Dön", "Index")
+    </div>
+</div>
+@section styles
+{
+    <link href="~/Areas/ManagerPanel/Assets/css/FormStyle.css" rel="stylesheet" />
+}
+
 

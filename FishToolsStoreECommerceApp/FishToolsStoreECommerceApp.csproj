@@ -154,6 +154,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\ManagerPanel\Views\Category\" />
+    <Folder Include="Assets\ProductImages\" />
     <Folder Include="Controllers\" />
   </ItemGroup>
   <PropertyGroup>
