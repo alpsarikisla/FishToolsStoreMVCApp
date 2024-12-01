@@ -19,6 +19,10 @@ namespace FishToolsStoreECommerceApp.Areas.ManagerPanel.Controllers
         // GET: ManagerPanel/Category
         public ActionResult Index()
         {
+            return View(db.Categories.Where(c=>c.IsDeleted==false).ToList());
+        }
+        public ActionResult AllIndex()
+        {
             return View(db.Categories.ToList());
         }
 
@@ -96,23 +100,40 @@ namespace FishToolsStoreECommerceApp.Areas.ManagerPanel.Controllers
         {
             if (id == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                return RedirectToAction("Index", "Category");
             }
             Category category = db.Categories.Find(id);
             if (category == null)
             {
-                return HttpNotFound();
+                return RedirectToAction("NotFound", "SystemMessages");
             }
             return View(category);
+        }
+        public ActionResult ReDelete(int? id)
+        {
+            if (id == null)
+            {
+                return RedirectToAction("Index", "Category");
+            }
+            Category category = db.Categories.Find(id);
+            if (category == null)
+            {
+                return RedirectToAction("NotFound", "SystemMessages");
+            }
+            category.IsDeleted = false;
+            db.Entry(category).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
 
         // POST: ManagerPanel/Category/Delete/5
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
             Category category = db.Categories.Find(id);
-            db.Categories.Remove(category);
+            category.IsDeleted = true;
+            category.IsActive = false;
+            db.Entry(category).State = EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("Index");
         }

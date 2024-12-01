@@ -27,11 +27,11 @@
                     </div>
                 }
                 <div class="row">
-                    @Html.EditorFor(x => x.Mail, new { htmlAttributes = new { @class = "input rounded", @placeholder = "Mail Adresiniz" } })
+                    @Html.EditorFor(x => x.Mail, new { htmlAttributes = new { @class = "input rounded", @placeholder = "Mail Adresiniz", @Value="devcan@gmail.com" } })
                     
                 </div>
                 <div class="row">
-                    @Html.EditorFor(x => x.Password, new { htmlAttributes = new { @class = "input rounded", @placeholder = "Şifreniz" } })
+                    @Html.EditorFor(x => x.Password, new { htmlAttributes = new { @class = "input rounded", @placeholder = "Şifreniz", @Value = "123456" } })
                 </div>
                 <div class="row">
                     <input type="submit" class="button rounded" value="Giriş Yap" />

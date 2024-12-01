@@ -18,7 +18,7 @@
         {
             #region Brands
 
-            context.Brands.AddOrUpdate(b => b.ID, new Brand() { ID = 1, Name = "Nike" });
+            //context.Brands.AddOrUpdate(b => b.ID, new Brand() { ID = 1, Name = "Nike" });
 
             #endregion
 
