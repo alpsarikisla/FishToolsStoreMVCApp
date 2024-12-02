@@ -143,6 +143,11 @@
     <Content Include="Areas\ManagerPanel\Views\Brands\AllIndex.cshtml" />
     <Content Include="Areas\ManagerPanel\Views\Product\Index.cshtml" />
     <Content Include="Areas\ManagerPanel\Views\Product\Create.cshtml" />
+    <Content Include="Areas\ManagerPanel\Views\Category\Index.cshtml" />
+    <Content Include="Areas\ManagerPanel\Views\Category\AllIndex.cshtml" />
+    <Content Include="Areas\ManagerPanel\Views\Category\Create.cshtml" />
+    <Content Include="Areas\ManagerPanel\Views\Category\Edit.cshtml" />
+    <Content Include="Areas\ManagerPanel\Views\Category\Delete.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -153,7 +158,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\ManagerPanel\Views\Category\" />
     <Folder Include="Assets\ProductImages\" />
     <Folder Include="Controllers\" />
   </ItemGroup>

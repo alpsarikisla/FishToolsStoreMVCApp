@@ -1,0 +1,69 @@
+﻿@model FishToolsStoreECommerceApp.Models.Category
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/ManagerPanel/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="breadCrumb">
+    <a href="@Url.Action("Index", "Home")">Anasayfa</a> >
+    <a href="@Url.Action("Index", "Category")">Kategoriler</a> >
+    <label>Kategori Sil</label>
+</div>
+
+<div class="pageContent">
+    <div class="pagetitle">
+        <h2>Kategori Sil</h2>
+        <div style="clear:both"></div>
+    </div>
+    <div class="formContent">
+        <h3>Kategoriyi Silmek istediğinize emin misiniz ?</h3>
+        <table border="1" cellpadding="5" cellspacing="0" style="border:1px solid Silver" width="600">
+            <tr>
+                <th align="left">ID</th>
+                <td>@Model.ID</td>
+            </tr>
+            <tr>
+                <th align="left">Kategori Adı</th>
+                <td>@Model.Name</td>
+            </tr>
+            <tr>
+                <th align="left">Açıklama</th>
+                <td>@Model.Description</td>
+            </tr>
+            <tr>
+                <th align="left">Marka Durum</th>
+                <td>@Model.IsActive</td>
+            </tr>
+            <tr>
+                <th align="left">Silinme durumu</th>
+                <td>
+                    @if (Model.IsDeleted)
+                    {
+                        <label>Silinmiş</label>
+                    }
+                    else
+                    {
+                        <label>Silinmemiş</label>
+                    }
+                </td>
+            </tr>
+        </table>
+        @using (Html.BeginForm())
+        {
+            <div class="row">
+                <input type="submit" value="Kategori Sil" class="btn btn-default" />
+                <div style="clear:both"></div>
+            </div>
+        }
+    </div>
+    <div class="formfooter">
+        @Html.ActionLink("Kategoriler Listesine Geri Dön", "Index")
+        <div style="clear:both"></div>
+    </div>
+</div>
+
+@section styles
+    {
+    <link href="~/Areas/ManagerPanel/Assets/css/FormStyle.css" rel="stylesheet" />
+}
+
