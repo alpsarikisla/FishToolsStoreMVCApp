@@ -101,6 +101,8 @@
     <Content Include="Areas\ManagerPanel\Assets\css\LoginStyle.css" />
     <Content Include="Areas\ManagerPanel\Assets\css\MainStyle.css" />
     <Content Include="Areas\ManagerPanel\Assets\css\TableStyle.css" />
+    <Content Include="Areas\ManagerPanel\Assets\PageImages\2068-fishing.gif" />
+    <Content Include="Areas\ManagerPanel\Assets\PageImages\high-angle-colorful-fishing-bait-with-net.jpg" />
     <Content Include="Areas\ManagerPanel\Assets\PageImages\http-404-not-found-error-dosya-bulunamadi-mesaji.jpg" />
     <Content Include="Areas\ManagerPanel\Assets\PageImages\User-Avatar-Profile-Clip-Art-Transparent-PNG.png" />
     <Content Include="Global.asax" />
@@ -143,11 +145,14 @@
     <Content Include="Areas\ManagerPanel\Views\Brands\AllIndex.cshtml" />
     <Content Include="Areas\ManagerPanel\Views\Product\Index.cshtml" />
     <Content Include="Areas\ManagerPanel\Views\Product\Create.cshtml" />
-    <Content Include="Areas\ManagerPanel\Views\Category\Create.cshtml" />
     <Content Include="Areas\ManagerPanel\Views\Category\Index.cshtml" />
     <Content Include="Areas\ManagerPanel\Views\Category\AllIndex.cshtml" />
+    <Content Include="Areas\ManagerPanel\Views\Category\Create.cshtml" />
     <Content Include="Areas\ManagerPanel\Views\Category\Edit.cshtml" />
     <Content Include="Areas\ManagerPanel\Views\Category\Delete.cshtml" />
+    <Content Include="Areas\ManagerPanel\Views\Product\AllIndex.cshtml" />
+    <Content Include="Areas\ManagerPanel\Views\Product\Edit.cshtml" />
+    <Content Include="Areas\ManagerPanel\Views\Product\Delete.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

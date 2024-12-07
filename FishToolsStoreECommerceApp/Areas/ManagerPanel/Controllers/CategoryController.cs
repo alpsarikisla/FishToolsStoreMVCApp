@@ -19,7 +19,7 @@ namespace FishToolsStoreECommerceApp.Areas.ManagerPanel.Controllers
         // GET: ManagerPanel/Category
         public ActionResult Index()
         {
-            return View(db.Categories.Where(c=>c.IsDeleted==false).ToList());
+            return View(db.Categories.Where(b => b.IsDeleted == false).ToList());
         }
         public ActionResult AllIndex()
         {
@@ -52,7 +52,7 @@ namespace FishToolsStoreECommerceApp.Areas.ManagerPanel.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Name,Description,IsActive,IsDeleted")] Category category)
+        public ActionResult Create(Category category)
         {
             if (ModelState.IsValid)
             {
@@ -69,12 +69,12 @@ namespace FishToolsStoreECommerceApp.Areas.ManagerPanel.Controllers
         {
             if (id == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                return RedirectToAction("Index", "Category");
             }
             Category category = db.Categories.Find(id);
             if (category == null)
             {
-                return HttpNotFound();
+                return RedirectToAction("NotFound", "SystemMessages");
             }
             return View(category);
         }
@@ -125,7 +125,6 @@ namespace FishToolsStoreECommerceApp.Areas.ManagerPanel.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-
         // POST: ManagerPanel/Category/Delete/5
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
