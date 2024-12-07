@@ -83,3 +83,15 @@ body {
         color: white;
         text-decoration: none;
     }
+.countBox
+{
+    float:left;
+    width:15%;
+    border:1px solid silver;
+    border-radius:7px;
+    padding:30px 10px;
+    margin:10px;
+    color:white;
+    font-size:15pt;
+    font-weight:900;
+}

@@ -1,16 +1,31 @@
 ﻿body {
     background-color: #DDDDDD;
     font-family:Calibri;
+    background-image:url(../PageImages/high-angle-colorful-fishing-bait-with-net.jpg);
+    background-size:cover;
 }
 .panelContainer {
     width: 400px;
-    padding:100px 20px;
-    margin:150px auto;
-    background-color:white;
+    padding: 40px 20px;
+    margin: 50px auto;
+    background-color: white;
+    border-radius: 15px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.48);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.48);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.48);
+}
+.loginImage
+{
+    text-align:center;
+}
+.loginImage img {
+    width:300px;
 }
 .title {
     height: 70px;
-    text-align:center;
+    text-align: center;
+    color:#059669;
+    font-weight:900;
 }
 .row {
     padding:15px 0;

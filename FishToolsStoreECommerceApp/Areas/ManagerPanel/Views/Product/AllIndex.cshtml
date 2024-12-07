@@ -1,0 +1,105 @@
+﻿@model IEnumerable<FishToolsStoreECommerceApp.Models.Product>
+@{
+    ViewBag.Title = "Ürünler";
+    Layout = "~/Areas/ManagerPanel/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="breadCrumb">
+    <a href="@Url.Action("Index", "Home")">Anasayfa</a> >
+    <label>Ürünler</label>
+</div>
+
+<div class="pageContent">
+    <div class="pagetitle">
+        @Html.ActionLink("Ürün Oluştur", "Create")
+        <h2>Ürün Listesi</h2>
+        <div style="clear:both"></div>
+    </div>
+    <div class="tableContent">
+        <table class="table">
+            <tr>
+                <th style="border-left:none">
+                    Ürün Resmi
+                </th>
+                <th>
+                    Ürün No
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    Kategori
+                </th>
+                <th>
+                    Marka
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Stock)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ReorderLevel)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IsActive)
+                </th>
+                <th>Seçenekler</th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td style="border-left:none">
+                        <img src="~/Assets/ProductImages/@item.Image" width="50" />
+                    </td>
+                    <td>@item.ID</td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Category.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Brand.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Stock)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ReorderLevel)
+                    </td>
+                    <td>
+                        @if (item.IsActive)
+                        {
+                            <label>Aktif</label>
+                        }
+                        else
+                        {
+                            <label>Pasif</label>
+                        }
+                    </td>
+                    <td>
+                        <a href="@Url.Action("Edit","Category",new {id=item.ID})" class="btnedit">Düzenle</a>
+                        <a href="@Url.Action("Delete","Category",new {id=item.ID})" class="btndelete">Sil</a>
+                    </td>
+                </tr>
+            }
+        </table>
+
+    </div>
+    <div class="tablefooter">
+        <a href="@Url.Action("Index","Product")"> Ürünleri Listele</a>
+    </div>
+</div>
+
+@section styles
+    {
+    <link href="~/Areas/ManagerPanel/Assets/css/TableStyle.css" rel="stylesheet" />
+}
+
+

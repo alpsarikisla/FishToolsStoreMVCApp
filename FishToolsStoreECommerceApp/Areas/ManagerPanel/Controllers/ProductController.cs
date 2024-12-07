@@ -16,7 +16,13 @@ namespace FishToolsStoreECommerceApp.Areas.ManagerPanel.Controllers
         // GET: ManagerPanel/Product
         public ActionResult Index()
         {
-            return View();
+            List<Product> products = db.Products.Where(p => p.IsActive == true && p.IsDeleted == false).ToList();
+            return View(products);
+        }
+
+        public ActionResult AllIndex()
+        {
+            return View(db.Products.ToList());
         }
 
         // GET: ManagerPanel/Product/Details/5
@@ -75,25 +81,61 @@ namespace FishToolsStoreECommerceApp.Areas.ManagerPanel.Controllers
         }
 
         // GET: ManagerPanel/Product/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return RedirectToAction("NotFound", "SystemMessages");
+            }
+            Product p = db.Products.Find(id);
+            if (p == null)
+            {
+                return RedirectToAction("NotFound", "SystemMessages");
+            }
+
+            ViewBag.Category_ID = new SelectList(db.Categories.Where(c => c.IsActive == true && c.IsDeleted == false), "ID", "Name",p.Category_ID);
+            ViewBag.Brand_ID = new SelectList(db.Brands.Where(c => c.IsActive == true && c.IsDeleted == false), "ID", "Name", p.Brand_ID);
+            return View(p);
         }
 
         // POST: ManagerPanel/Product/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, Product model, HttpPostedFileBase productImage)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
+                try
+                {
+                    db.Entry(model).State = System.Data.Entity.EntityState.Modified;
+                    if (productImage != null)
+                    {
+                        bool imageIsValid = false;
+                        FileInfo fi = new FileInfo(productImage.FileName);
+                        if (fi.Extension == ".jpg" || fi.Extension == ".png" || fi.Extension == ".jpeg")
+                        {
+                            imageIsValid = true;
+                            Guid filename = Guid.NewGuid();
+                            string fullname = filename + fi.Extension;
+                            productImage.SaveAs(Server.MapPath("~/Assets/ProductImages/" + fullname));
+                            model.Image = fullname;
+                        }
+                        if (imageIsValid)
+                        {
+                            db.SaveChanges();
+                        }
+                    }
+                    else
+                    {
+                        db.SaveChanges();
+                    }
+                    return RedirectToAction("Index");
+                }
+                catch
+                {
+                    return View();
+                }
             }
-            catch
-            {
-                return View();
-            }
+            return View();
         }
 
         // GET: ManagerPanel/Product/Delete/5
