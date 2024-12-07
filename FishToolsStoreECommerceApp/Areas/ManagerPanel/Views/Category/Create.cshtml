@@ -1,0 +1,59 @@
+﻿@model FishToolsStoreECommerceApp.Models.Category
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/ManagerPanel/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="breadCrumb">
+    <a href="@Url.Action("Index", "Home")">Anasayfa</a> >
+    <label>Kategoriler</label>
+</div>
+
+<div class="pageContent">
+    <div class="pagetitle">
+
+        <h2>Kategori Ekle</h2>
+        <div style="clear:both"></div>
+    </div>
+    <div class="formContent">
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <div class="row">
+                    @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label " })
+                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                </div>
+                <div class="row">
+                    @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                </div>
+                <div class="row">
+                    @Html.LabelFor(model => model.IsActive, htmlAttributes: new { @class = "control-label " })
+                    @Html.EditorFor(model => model.IsActive) Aktif Kategori
+                    @Html.ValidationMessageFor(model => model.IsActive, "", new { @class = "text-danger" })
+                </div>
+                <div class="row">
+                    <input type="submit" value="Kategori Ekle" class="btn btn-default" />
+                    <div style="clear:both"></div>
+                </div>
+            </div>
+
+        }
+
+    </div>
+    <div class="formfooter">
+        @Html.ActionLink("Kategori Listesine Geri Dön", "Index")
+        <div style="clear:both"></div>
+    </div>
+</div>
+
+@section styles
+    {
+    <link href="~/Areas/ManagerPanel/Assets/css/FormStyle.css" rel="stylesheet" />
+}
+

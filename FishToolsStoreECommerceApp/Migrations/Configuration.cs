@@ -24,7 +24,7 @@
 
             #region Managers
 
-            //context.Managers.AddOrUpdate(b => b.ID, new Manager() { ID = 3, Name = "Developer", Surname = "Developer", Mail="devdev@dev.com", Password="1234567", UserName="Developer", CreationTime= DateTime.Now,LastLoginTime=DateTime.Now });
+            //context.Managers.AddOrUpdate(b => b.ID, new Manager() { ID = 3, Name = "Developer", Surname = "Developer", Mail = "devdev@dev.com", Password = "1234567", UserName = "Developer", CreationTime = DateTime.Now, LastLoginTime = DateTime.Now });
 
             #endregion
         }
