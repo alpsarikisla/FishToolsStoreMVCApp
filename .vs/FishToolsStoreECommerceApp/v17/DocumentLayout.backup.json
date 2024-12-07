@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|solutionrelative:fishtoolsstoreecommerceapp\\areas\\managerpanel\\views\\category\\allindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|c:\\users\\61vah\\documents\\github\\fishtoolsstoremvcapp\\fishtoolsstoreecommerceapp\\areas\\managerpanel\\views\\product\\allindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|C:\\Users\\61vah\\Documents\\GitHub\\FishToolsStoreMVCApp\\fishtoolsstoreecommerceapp\\areas\\managerpanel\\views\\product\\allindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|solutionrelative:fishtoolsstoreecommerceapp\\areas\\managerpanel\\views\\product\\allindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -19,7 +19,7 @@
       "RelativeMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|solutionrelative:fishtoolsstoreecommerceapp\\areas\\managerpanel\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|c:\\users\\61vah\\documents\\github\\fishtoolsstoremvcapp\\fishtoolsstoreecommerceapp\\areas\\managerpanel\\views\\product\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|C:\\Users\\61vah\\Documents\\GitHub\\FishToolsStoreMVCApp\\fishtoolsstoreecommerceapp\\areas\\managerpanel\\views\\product\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|solutionrelative:fishtoolsstoreecommerceapp\\areas\\managerpanel\\views\\product\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "FishToolsStoreECommerceApp\\Areas\\ManagerPanel\\Views\\Category\\AllIndex.cshtml",
               "ToolTip": "C:\\Users\\61vah\\Documents\\GitHub\\FishToolsStoreMVCApp\\FishToolsStoreECommerceApp\\Areas\\ManagerPanel\\Views\\Category\\AllIndex.cshtml",
               "RelativeToolTip": "FishToolsStoreECommerceApp\\Areas\\ManagerPanel\\Views\\Category\\AllIndex.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-12-07T14:41:55.001Z",
               "EditorCaption": ""
@@ -55,8 +55,7 @@
               "RelativeToolTip": "FishToolsStoreECommerceApp\\Areas\\ManagerPanel\\Views\\Product\\AllIndex.cshtml",
               "ViewState": "AgIAACQAAAAAAAAAAAAAADYAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-07T14:29:47.572Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T14:29:47.572Z"
             },
             {
               "$type": "Document",
@@ -68,8 +67,7 @@
               "RelativeToolTip": "FishToolsStoreECommerceApp\\Areas\\ManagerPanel\\Views\\Product\\Delete.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-07T14:25:22.109Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T14:25:22.109Z"
             },
             {
               "$type": "Document",
@@ -81,8 +79,7 @@
               "RelativeToolTip": "FishToolsStoreECommerceApp\\Areas\\ManagerPanel\\Controllers\\ProductController.cs",
               "ViewState": "AgIAACUAAAAAAAAAAAAkwBcAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T08:47:56.718Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T08:47:56.718Z"
             },
             {
               "$type": "Document",
@@ -94,8 +91,7 @@
               "RelativeToolTip": "FishToolsStoreECommerceApp\\Areas\\ManagerPanel\\Views\\Product\\Index.cshtml",
               "ViewState": "AgIAABsAAAAAAAAAAAAAABIAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-07T08:28:36.517Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T08:28:36.517Z"
             }
           ]
         }
