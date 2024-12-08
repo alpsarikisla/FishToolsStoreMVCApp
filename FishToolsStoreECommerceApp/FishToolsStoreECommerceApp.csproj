@@ -105,6 +105,10 @@
     <Content Include="Areas\ManagerPanel\Assets\PageImages\high-angle-colorful-fishing-bait-with-net.jpg" />
     <Content Include="Areas\ManagerPanel\Assets\PageImages\http-404-not-found-error-dosya-bulunamadi-mesaji.jpg" />
     <Content Include="Areas\ManagerPanel\Assets\PageImages\User-Avatar-Profile-Clip-Art-Transparent-PNG.png" />
+    <Content Include="Assets\css\UIMainStyle.css" />
+    <Content Include="Assets\PageImages\banner.png" />
+    <Content Include="Assets\PageImages\fishtools-logo.png" />
+    <Content Include="Assets\ProductImages\d2895e9a-ee89-40ce-8315-b67009065d52.jpg" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -119,6 +123,7 @@
     <Compile Include="Areas\ManagerPanel\Data\ViewModels\ManagerLoginViewModel.cs" />
     <Compile Include="Areas\ManagerPanel\Filters\ManagerAuthorizationFilterAttribute.cs" />
     <Compile Include="Areas\ManagerPanel\ManagerPanelAreaRegistration.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -152,7 +157,10 @@
     <Content Include="Areas\ManagerPanel\Views\Category\Delete.cshtml" />
     <Content Include="Areas\ManagerPanel\Views\Product\AllIndex.cshtml" />
     <Content Include="Areas\ManagerPanel\Views\Product\Edit.cshtml" />
+    <Content Include="Areas\ManagerPanel\Views\Product\Delete.cshtml" />
     <None Include="packages.config" />
+    <Content Include="Views\Shared\_LayoutPage1.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -162,8 +170,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Assets\ProductImages\" />
-    <Folder Include="Controllers\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

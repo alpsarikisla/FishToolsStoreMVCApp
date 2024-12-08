@@ -50,44 +50,89 @@
 
             @foreach (var item in Model)
             {
-                <tr>
-                    <td style="border-left:none">
-                        <img src="~/Assets/ProductImages/@item.Image" width="50" />
-                    </td>
-                    <td>@item.ID</td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Name)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Category.Name)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Brand.Name)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Price)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Stock)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.ReorderLevel)
-                    </td>
-                    <td>
-                        @if (item.IsActive)
-                        {
-                            <label>Aktif</label>
-                        }
-                        else
-                        {
-                            <label>Pasif</label>
-                        }
-                    </td>
-                    <td>
-                        <a href="@Url.Action("Edit","Category",new {id=item.ID})" class="btnedit">Düzenle</a>
-                        <a href="@Url.Action("Delete","Category",new {id=item.ID})" class="btndelete">Sil</a>
-                    </td>
-                </tr>
+                if (item.IsDeleted)
+                {
+                    <tr style="background-color:#ffdede">
+                        <td style="border-left:none">
+                            <img src="~/Assets/ProductImages/@item.Image" width="50" />
+                        </td>
+                        <td>@item.ID</td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Category.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Brand.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Price)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Stock)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ReorderLevel)
+                        </td>
+                        <td>
+                            @if (item.IsActive)
+                            {
+                                <label>Aktif</label>
+                            }
+                            else
+                            {
+                                <label>Pasif</label>
+                            }
+                        </td>
+                        <td>
+                            <a href="@Url.Action("Edit","Product",new {id=item.ID})" class="btnedit">Düzenle</a>
+                            <a href="@Url.Action("ReDelete","Product",new {id=item.ID})" class="btndetail">Silme İşlemini Geri Al</a>
+                        </td>
+                    </tr>
+                }
+                else
+                {
+                    <tr>
+                        <td style="border-left:none">
+                            <img src="~/Assets/ProductImages/@item.Image" width="50" />
+                        </td>
+                        <td>@item.ID</td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Category.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Brand.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Price)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Stock)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ReorderLevel)
+                        </td>
+                        <td>
+                            @if (item.IsActive)
+                            {
+                                <label>Aktif</label>
+                            }
+                            else
+                            {
+                                <label>Pasif</label>
+                            }
+                        </td>
+                        <td>
+                            <a href="@Url.Action("Edit","Product",new {id=item.ID})" class="btnedit">Düzenle</a>
+                            <a href="@Url.Action("Delete","Product",new {id=item.ID})" class="btndelete">Sil</a>
+                        </td>
+                    </tr>
+                }
+
             }
         </table>
 

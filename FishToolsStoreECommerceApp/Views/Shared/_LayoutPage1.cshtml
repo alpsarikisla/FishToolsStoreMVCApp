@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Fish Tools Store - @ViewBag.Title</title>
+    <link href="~/Assets/css/UIMainStyle.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="topbanner">
+        <div class="boxedlayout">
+            <div class="left hizliveucretsiz">
+                <strong>Hızlı ve Ücretsiz</strong> 2 Günde Siparişin Yanında...
+            </div>
+            <div class="right userbuttons">
+                <a href="">Takip Listem</a>
+                <a href="">Giriş Yap</a>/
+                <a href="" style="padding:0;">Üye Ol</a>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+    </div>
+    <div class="boxedlayout">
+        <div class="header">
+            <div class="left logo">
+                <img src="~/Assets/PageImages/fishtools-logo.png" />
+            </div>
+            <div class="right phoneAndCart">
+                <a href="" class="phone">+90222 220 25 76</a>
+                <a href="" class="cart">Sepetim (0) </a>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="mainMenu">
+            <a href="@Url.Action("Index","Home")" class="home">Anasayfa</a>
+            <a href="">Kampanyalar</a>
+            <a href="">Ödeme Yöntemleri</a>
+            <a href="">İletişim</a>
+        </div>
+    </div>
+    <div class="boxedlayout">
+        @RenderBody()
+    </div>
+</body>
+</html>

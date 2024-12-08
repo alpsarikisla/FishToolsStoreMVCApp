@@ -1,8 +1,8 @@
 ﻿body {
     background-color: #DDDDDD;
-    font-family:Calibri;
-    background-image:url(../PageImages/high-angle-colorful-fishing-bait-with-net.jpg);
-    background-size:cover;
+    font-family: Calibri;
+    background-image: url(../PageImages/high-angle-colorful-fishing-bait-with-net.jpg);
+    background-size: cover;
 }
 .panelContainer {
     width: 400px;

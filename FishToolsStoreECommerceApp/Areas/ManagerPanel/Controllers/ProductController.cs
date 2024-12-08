@@ -2,6 +2,7 @@
 using FishToolsStoreECommerceApp.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.IO;
 using System.Linq;
 using System.Web;
@@ -16,7 +17,7 @@ namespace FishToolsStoreECommerceApp.Areas.ManagerPanel.Controllers
         // GET: ManagerPanel/Product
         public ActionResult Index()
         {
-            List<Product> products = db.Products.Where(p => p.IsActive == true && p.IsDeleted == false).ToList();
+            List<Product> products = db.Products.Where(p => p.IsDeleted == false).ToList();
             return View(products);
         }
 
@@ -139,25 +140,55 @@ namespace FishToolsStoreECommerceApp.Areas.ManagerPanel.Controllers
         }
 
         // GET: ManagerPanel/Product/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Delete(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return RedirectToAction("Index", "Product");
+            }
+            Product prod = db.Products.Find(id);
+            if (prod == null)
+            {
+                return RedirectToAction("NotFound", "SystemMessages");
+            }
+            return View(prod);
+        }
+        public ActionResult ReDelete(int? id)
+        {
+            if (id == null)
+            {
+                return RedirectToAction("Index", "Brands");
+            }
+            Product prod = db.Products.Find(id);
+            if (prod == null)
+            {
+                return RedirectToAction("NotFound", "SystemMessages");
+            }
+            prod.IsDeleted = false;
+            db.Entry(prod).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
 
-        // POST: ManagerPanel/Product/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        // POST: ManagerPanel/Brands/Delete/5
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int id)
         {
-            try
-            {
-                // TODO: Add delete logic here
+            Product prod = db.Products.Find(id);
+            prod.IsDeleted = true;
+            prod.IsActive = false;
+            db.Entry(prod).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
 
-                return RedirectToAction("Index");
-            }
-            catch
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
             {
-                return View();
+                db.Dispose();
             }
+            base.Dispose(disposing);
         }
     }
 }

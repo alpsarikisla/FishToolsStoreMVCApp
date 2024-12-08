@@ -16,7 +16,7 @@
         @Html.ActionLink("Kategori Oluştur", "Create")
         <h2>Kategoriler Listesi</h2>
         <div style="clear:both"></div>
-    </div>
+    </div> 
     <div class="tableContent">
         <table class="table">
             <tr>
@@ -40,7 +40,7 @@
                 if (item.IsDeleted)
                 {
 
-                    <tr style="background-color:#f33636">
+                    <tr style="background-color: #ffdede">
                         <td style="border-left:none">@item.ID</td>
                         <td>
                             @Html.DisplayFor(modelItem => item.Name)
@@ -60,7 +60,7 @@
                         </td>
                         <td>
                             <a href="@Url.Action("Edit","Category",new {id=item.ID})" class="btnedit">Düzenle</a>
-                            <a href="@Url.Action("ReDelete","Category",new {id=item.ID})" class="btndelete">Silme İşlemini Geri Al</a>
+                            <a href="@Url.Action("ReDelete","Category",new {id=item.ID})" class="btndetail">Silme İşlemini Geri Al</a>
                         </td>
                     </tr>
                 }

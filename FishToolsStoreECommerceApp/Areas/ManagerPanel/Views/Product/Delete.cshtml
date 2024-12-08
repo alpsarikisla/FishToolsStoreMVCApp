@@ -1,0 +1,83 @@
+﻿@model FishToolsStoreECommerceApp.Models.Product
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/ManagerPanel/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+<div class="breadCrumb">
+    <a href="@Url.Action("Index", "Home")">Anasayfa</a> >
+    <a href="@Url.Action("Index", "Product")">Markalar</a> >
+    <label>Ürün Sil</label>
+</div>
+
+<div class="pageContent">
+    <div class="pagetitle">
+        <h2>Ürün Sil</h2>
+    </div>
+    <div class="formContent">
+        <h3>Bu ürünü silmek istediğinize emin misiniz?</h3>
+        <table border="1" cellpadding="5" cellspacing="0" style="border:1px solid silver" width="600">
+            <tr>
+                <th align="left" width="30%">ID</th>
+                <td>@Model.ID</td>
+            </tr>
+            <tr>
+                <th align="left">Ürün Adı</th>
+                <td>@Model.Name</td>
+            </tr>
+            <tr>
+                <th align="left">Ürün Barkodu</th>
+                <td>@Model.Barcode</td>
+            </tr>
+            <tr>
+                <th align="left">Ürün Kategorisi</th>
+                <td>@Model.Category.Name</td>
+            </tr>
+            <tr>
+                <th align="left">Ürün Markası</th>
+                <td>@Model.Brand.Name</td>
+            </tr>
+            <tr>
+                <th align="left">Ürün Stoğu</th>
+                <td>@Model.Stock</td>
+            </tr>
+            <tr>
+                <th align="left">Ürün Fiyatı</th>
+                <td>@Model.Price</td>
+            </tr>
+            <tr>
+                <th align="left">Ürün Durum</th>
+                <td>@Model.IsActive</td>
+            </tr>
+            <tr>
+                <th align="left">Silinme Durumu</th>
+                <td>
+                    @if (Model.IsDeleted)
+                    {
+                        <label>Silinmiş</label>
+                    }
+                    else
+                    {
+                        <label>Silinmemiş</label>
+                    }
+                </td>
+            </tr>
+        </table>
+        @using (Html.BeginForm())
+        {
+            <div class="row">
+                <input type="submit" value="Ürün Sil" class="btn btn-default" />
+            </div>
+        }
+
+    </div>
+    <div class="formfooter">
+        @Html.ActionLink("Ürünler Listesine Dön", "Index")
+    </div>
+</div>
+@section styles
+{
+    <link href="~/Areas/ManagerPanel/Assets/css/FormStyle.css" rel="stylesheet" />
+}
