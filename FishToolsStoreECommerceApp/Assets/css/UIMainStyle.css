@@ -1,0 +1,195 @@
+﻿*,h1,h2,h3,h4,h5,h6
+{
+    margin:0;padding:0;
+}
+body {
+    font-family:Calibri;
+}
+.topbanner {
+    background-color: #059669;
+    color:white;
+    padding:10px 0;
+}
+.boxedlayout
+{
+    width:1170px;
+    margin:0 auto;
+}
+.left{
+    float:left;
+}
+.right{
+    float:right;
+}
+.hizliveucretsiz{
+    text-transform:uppercase;
+}
+.userbuttons
+{
+
+}
+.userbuttons a{
+    text-decoration:none;
+    padding-left:20px;
+    color:white;
+}
+.header
+{
+    margin:10px 0;
+    padding:10px 0;
+}
+.phoneAndCart {
+   margin-top:7px;
+    font-weight:900;
+    font-size:14pt;
+}
+    .phoneAndCart .phone {
+        border-right: 1px solid silver;
+        padding-right: 10px;
+        text-decoration: none;
+        color: #121331;
+    }
+    .phoneAndCart .cart {
+        padding-left: 10px;
+        text-decoration: none;
+        color: #121331;
+    }
+.mainMenu {
+    border-top: 1px solid silver;
+    border-bottom: 1px solid silver;
+    min-height:48px;
+}
+    .mainMenu .home{
+        background-color:#059669;
+        color:white;
+        padding:15px 90px;
+        display:table-cell
+    }
+    .mainMenu a {
+        color: dimgrey;
+        font-weight: 900;
+        padding:0 10px;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: table-cell
+    }
+.indextop {
+    border-top: 3px solid #121331;
+    border-bottom: 3px solid #121331;
+    padding: 5px 0;
+    margin-top: 20px;
+    text-align:center;
+}
+    .indextop label {
+        color: #121331;
+        font-size: 25pt;
+        font-weight: 900;
+    }
+    .indextop span {
+        color: #059669;
+        font-size: 35pt;
+        font-weight :900;
+    }
+    .indextop a {
+        padding-left:30px;
+        color: #059669;
+        font-size: 25pt;
+        font-weight: 900;
+        text-decoration:none;
+    }
+.banner {
+    margin-top:20px;
+}
+.mainBase{
+    margin-top:20px;
+}
+    .mainBase .categoriesBase {
+        width:240px;
+        float:left;
+       
+    }
+        .mainBase .categoriesBase .title {
+            background-color: #059669;
+            min-height: 20px;
+            color: white;
+            text-align: center;
+            font-size: 17pt;
+            padding: 10px;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        }
+        .mainBase .categoriesBase .content {
+            border: 1px solid silver;
+            border-bottom-left-radius: 7px;
+            border-bottom-right-radius: 7px;
+        }
+            .mainBase .categoriesBase .content a {
+                display: block;
+                padding: 7px 10px;
+                color: darkslategray;
+                text-decoration: none;
+                border-bottom: 1px solid darkslategray;
+            }
+                .mainBase .categoriesBase .content a:hover{
+                    background-color:#efefef;
+                    cursor:pointer;
+                    font-weight:900;
+                }
+                .mainBase .productBase {
+                    width: 930px;
+                    float: left;
+                }
+    .mainBase .productBase .product{
+        width:180px;
+        padding:15px;
+        padding-top:0;
+        border:1px solid silver;
+        border-radius:7px;
+        float:left;
+        margin:10px;
+        margin-top:0;
+    }
+        .mainBase .productBase .product:hover {
+            box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.3);
+        }
+        .mainBase .productBase .product .image {
+            margin-top: 10px;
+        }
+        .mainBase .productBase .product .image img {
+            width: 100%;
+        }
+        .mainBase .productBase .product .name {
+            padding: 5px;
+            border-top: 1px solid silver;
+            padding: 5px 0;
+            margin-top: 5px;
+            color:#121331;
+            font-weight:900;
+        }
+        .mainBase .productBase .product .price {
+            padding: 5px;
+            color: #059669;
+            font-weight: 900;
+            font-size: 19pt;
+        }
+            .mainBase .productBase .product .price label {
+                text-decoration: line-through;
+                color: #121331;
+                font-weight: 100;
+                padding-left: 10px;
+                font-size: 12pt;
+            }
+            .mainBase .productBase .product .cart {
+            }
+            .mainBase .productBase .product .cart a {
+                display: block;
+                background-color: #059669;
+                color: white;
+                text-align: center;
+                padding: 7px;
+                border-radius: 3px;
+                text-decoration:none;
+            }
+                .mainBase .productBase .product .cart a:hover {
+                    background-color: #046446;
+                }

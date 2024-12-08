@@ -1,0 +1,54 @@
+﻿@model IEnumerable<FishToolsStoreECommerceApp.Models.Product>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    List<FishToolsStoreECommerceApp.Models.Category> categories = ViewBag.categories as List<FishToolsStoreECommerceApp.Models.Category>;
+}
+
+<div class="indextop">
+    <label> Hızlı Ve Ücretsiz </label> <span> 2 Günde </span> <label> Teslimat </label>
+    <a href="">Detaylı Bilgi...</a>
+    <div style="clear:both"></div>
+</div>
+<div class="banner">
+    <a href="">
+        <img src="~/Assets/PageImages/banner.png" />
+    </a>
+</div>
+<div class="mainBase">
+    <div class="categoriesBase">
+        <div class="title">
+            Kategoriler
+        </div>
+        <div class="content">
+            @foreach (var item in categories)
+            {
+                <a href="">@item.Name</a>
+            }
+        </div>
+    </div>
+    <div class="productBase">
+        @foreach (var item in Model)
+        {
+            double zamliprice = item.Price + 105;//:D
+            <div class="product">
+                <div class="image">
+                    <img src="~/Assets/ProductImages/@item.Image" />
+                </div>
+                <div class="name">
+                    @item.Name
+                </div>
+                <div class="price">
+                    @item.Price ₺ <label>@zamliprice ₺</label>
+                </div>
+                <div class="cart">
+                    <a href="">Sepete Ekle</a>
+                </div>
+            </div>
+
+        }
+        <div style="clear:both"></div>
+    </div>
+    <div style="clear:both"></div>
+</div>
+
