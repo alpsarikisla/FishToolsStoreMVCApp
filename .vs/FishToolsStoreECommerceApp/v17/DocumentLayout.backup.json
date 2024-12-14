@@ -1,26 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\61vah\\Documents\\GitHub\\FishToolsStoreMVCApp\\",
+  "WorkspaceRootPath": "C:\\Users\\serap\\Belgeler\\GitHub\\FishToolsStoreMVCApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|c:\\users\\61vah\\documents\\github\\fishtoolsstoremvcapp\\fishtoolsstoreecommerceapp\\areas\\managerpanel\\views\\category\\allindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|solutionrelative:fishtoolsstoreecommerceapp\\areas\\managerpanel\\views\\category\\allindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|c:\\users\\serap\\belgeler\\github\\fishtoolsstoremvcapp\\fishtoolsstoreecommerceapp\\views\\product\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|solutionrelative:fishtoolsstoreecommerceapp\\views\\product\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|C:\\Users\\61vah\\Documents\\GitHub\\FishToolsStoreMVCApp\\fishtoolsstoreecommerceapp\\areas\\managerpanel\\views\\product\\allindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|solutionrelative:fishtoolsstoreecommerceapp\\areas\\managerpanel\\views\\product\\allindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|C:\\Users\\61vah\\Documents\\GitHub\\FishToolsStoreMVCApp\\fishtoolsstoreecommerceapp\\areas\\managerpanel\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|solutionrelative:fishtoolsstoreecommerceapp\\areas\\managerpanel\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|C:\\Users\\61vah\\Documents\\GitHub\\FishToolsStoreMVCApp\\fishtoolsstoreecommerceapp\\areas\\managerpanel\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|solutionrelative:fishtoolsstoreecommerceapp\\areas\\managerpanel\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|C:\\Users\\61vah\\Documents\\GitHub\\FishToolsStoreMVCApp\\fishtoolsstoreecommerceapp\\areas\\managerpanel\\views\\product\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|solutionrelative:fishtoolsstoreecommerceapp\\areas\\managerpanel\\views\\product\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|c:\\users\\serap\\belgeler\\github\\fishtoolsstoremvcapp\\fishtoolsstoreecommerceapp\\areas\\managerpanel\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|solutionrelative:fishtoolsstoreecommerceapp\\areas\\managerpanel\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,69 +17,34 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 1035,
+          "DockedWidth": 2893,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AllIndex.cshtml",
-              "DocumentMoniker": "C:\\Users\\61vah\\Documents\\GitHub\\FishToolsStoreMVCApp\\FishToolsStoreECommerceApp\\Areas\\ManagerPanel\\Views\\Category\\AllIndex.cshtml",
-              "RelativeDocumentMoniker": "FishToolsStoreECommerceApp\\Areas\\ManagerPanel\\Views\\Category\\AllIndex.cshtml",
-              "ToolTip": "C:\\Users\\61vah\\Documents\\GitHub\\FishToolsStoreMVCApp\\FishToolsStoreECommerceApp\\Areas\\ManagerPanel\\Views\\Category\\AllIndex.cshtml",
-              "RelativeToolTip": "FishToolsStoreECommerceApp\\Areas\\ManagerPanel\\Views\\Category\\AllIndex.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABQAAAAdAAAAAAAAAA==",
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "C:\\Users\\serap\\Belgeler\\GitHub\\FishToolsStoreMVCApp\\FishToolsStoreECommerceApp\\Views\\Product\\Detail.cshtml",
+              "RelativeDocumentMoniker": "FishToolsStoreECommerceApp\\Views\\Product\\Detail.cshtml",
+              "ToolTip": "C:\\Users\\serap\\Belgeler\\GitHub\\FishToolsStoreMVCApp\\FishToolsStoreECommerceApp\\Views\\Product\\Detail.cshtml",
+              "RelativeToolTip": "FishToolsStoreECommerceApp\\Views\\Product\\Detail.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-07T14:41:55.001Z",
+              "WhenOpened": "2024-12-14T15:45:31.916Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AllIndex.cshtml",
-              "DocumentMoniker": "C:\\Users\\61vah\\Documents\\GitHub\\FishToolsStoreMVCApp\\FishToolsStoreECommerceApp\\Areas\\ManagerPanel\\Views\\Product\\AllIndex.cshtml",
-              "RelativeDocumentMoniker": "FishToolsStoreECommerceApp\\Areas\\ManagerPanel\\Views\\Product\\AllIndex.cshtml",
-              "ToolTip": "C:\\Users\\61vah\\Documents\\GitHub\\FishToolsStoreMVCApp\\FishToolsStoreECommerceApp\\Areas\\ManagerPanel\\Views\\Product\\AllIndex.cshtml",
-              "RelativeToolTip": "FishToolsStoreECommerceApp\\Areas\\ManagerPanel\\Views\\Product\\AllIndex.cshtml",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAADYAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-07T14:29:47.572Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\61vah\\Documents\\GitHub\\FishToolsStoreMVCApp\\FishToolsStoreECommerceApp\\Areas\\ManagerPanel\\Views\\Product\\Delete.cshtml",
-              "RelativeDocumentMoniker": "FishToolsStoreECommerceApp\\Areas\\ManagerPanel\\Views\\Product\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\61vah\\Documents\\GitHub\\FishToolsStoreMVCApp\\FishToolsStoreECommerceApp\\Areas\\ManagerPanel\\Views\\Product\\Delete.cshtml",
-              "RelativeToolTip": "FishToolsStoreECommerceApp\\Areas\\ManagerPanel\\Views\\Product\\Delete.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-07T14:25:22.109Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\Users\\61vah\\Documents\\GitHub\\FishToolsStoreMVCApp\\FishToolsStoreECommerceApp\\Areas\\ManagerPanel\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "FishToolsStoreECommerceApp\\Areas\\ManagerPanel\\Controllers\\ProductController.cs",
-              "ToolTip": "C:\\Users\\61vah\\Documents\\GitHub\\FishToolsStoreMVCApp\\FishToolsStoreECommerceApp\\Areas\\ManagerPanel\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "FishToolsStoreECommerceApp\\Areas\\ManagerPanel\\Controllers\\ProductController.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAkwBcAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T08:47:56.718Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\61vah\\Documents\\GitHub\\FishToolsStoreMVCApp\\FishToolsStoreECommerceApp\\Areas\\ManagerPanel\\Views\\Product\\Index.cshtml",
-              "RelativeDocumentMoniker": "FishToolsStoreECommerceApp\\Areas\\ManagerPanel\\Views\\Product\\Index.cshtml",
-              "ToolTip": "C:\\Users\\61vah\\Documents\\GitHub\\FishToolsStoreMVCApp\\FishToolsStoreECommerceApp\\Areas\\ManagerPanel\\Views\\Product\\Index.cshtml",
-              "RelativeToolTip": "FishToolsStoreECommerceApp\\Areas\\ManagerPanel\\Views\\Product\\Index.cshtml",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAABIAAAAdAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\serap\\Belgeler\\GitHub\\FishToolsStoreMVCApp\\FishToolsStoreECommerceApp\\Areas\\ManagerPanel\\Views\\Login\\Index.cshtml",
+              "RelativeDocumentMoniker": "FishToolsStoreECommerceApp\\Areas\\ManagerPanel\\Views\\Login\\Index.cshtml",
+              "ToolTip": "C:\\Users\\serap\\Belgeler\\GitHub\\FishToolsStoreMVCApp\\FishToolsStoreECommerceApp\\Areas\\ManagerPanel\\Views\\Login\\Index.cshtml",
+              "RelativeToolTip": "FishToolsStoreECommerceApp\\Areas\\ManagerPanel\\Views\\Login\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-07T08:28:36.517Z"
+              "WhenOpened": "2024-12-14T15:40:17.303Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@{
+    FishToolsStoreECommerceApp.Models.Member user = Session["user"] as FishToolsStoreECommerceApp.Models.Member;
+}
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -14,8 +17,19 @@
             </div>
             <div class="right userbuttons">
                 <a href="">Takip Listem</a>
-                <a href="">Giriş Yap</a>/
-                <a href="" style="padding:0;">Üye Ol</a>
+                @if (Session["user"] != null)
+                {
+                    <a href="@Url.Action("Favorites", "Product")">Favorilerim</a>
+                    <a href="@Url.Action("Logout", "Login")">Çıkış Yap</a>
+                    <span>@user.Name @user.Surname</span>
+
+                }
+                else
+                {
+                    <a href="@Url.Action("Index","Login")">Giriş Yap</a><label>/</label>
+                    <a href="@Url.Action("Index","Register")" style="padding:0;">Üye Ol</a>
+                }
+
             </div>
             <div style="clear:both"></div>
         </div>

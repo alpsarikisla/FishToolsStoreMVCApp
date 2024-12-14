@@ -322,3 +322,187 @@ body {
         padding-bottom:15px;
         color:#121331;
     }
+.registerForm {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 7px;
+    border: 1px solid silver;
+    background-color: #ffffff;
+    margin-top: 30px;
+    margin-bottom:30px;
+}
+    .registerForm h2{
+        text-align:center;
+        font-size:20pt;
+    }
+
+    .registerForm .row {
+        margin-bottom: 15px;
+    }
+
+    .registerForm label {
+        font-weight: bold;
+        color: #121331;
+        font-size: 14pt;
+    }
+
+    .registerForm .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid silver;
+        border-radius: 5px;
+        margin-top: 5px;
+        font-size: 14pt;
+    }
+
+    .registerForm .btn {
+        background-color: #059669;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16pt;
+        width: 100%;
+    }
+
+        .registerForm .btn:hover {
+            background-color: #046446;
+            cursor: pointer;
+        }
+
+.warningMessage {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    margin: 20px 0;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+}
+
+.successMessage {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    margin: 20px 0;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+}
+.loginForm {
+    padding-top: 20px;
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 7px;
+    border: 1px solid silver;
+    background-color: #ffffff;
+    margin-top:30px;
+}
+
+    .loginForm h2 {
+        text-align: center;
+        font-size: 20pt;
+    }
+
+    .loginForm .row {
+        margin-bottom: 15px;
+    }
+
+    .loginForm label {
+        font-weight: bold;
+        color: #121331;
+        font-size: 14pt;
+    }
+
+    .loginForm .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid silver;
+        border-radius: 5px;
+        margin-top: 5px;
+        font-size: 14pt;
+    }
+
+    .loginForm .btn {
+        background-color: #059669;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16pt;
+        width: 100%;
+    }
+
+        .loginForm .btn:hover {
+            background-color: #046446;
+            cursor: pointer;
+        }
+
+    .loginForm a {
+        text-align: center;
+        display: block;
+        margin-top: 10px;
+        color: #059669;
+        font-size: 14pt;
+        text-decoration: none;
+    }
+
+        .loginForm a:hover {
+            color: #046446;
+        }
+.favoriteProducts {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+    .favoriteProducts .headerRow th {
+        background-color: #059669;
+        color: white;
+        font-weight: 900;
+        text-transform: uppercase;
+        padding: 12px;
+        text-align: left;
+        border: 1px solid silver;
+    }
+
+    .favoriteProducts th,
+    .favoriteProducts td {
+        padding: 12px;
+        text-align: left;
+        border: 1px solid silver;
+        font-size: 14pt;
+        color: #121331;
+    }
+
+        .favoriteProducts td img {
+            width: 100px;
+        }
+    .favoriteProducts tr{
+
+    }
+        .favoriteProducts tr:hover{
+            background-color:#d7d5d5;
+        }
+
+        .favoriteProducts a {
+            color: #059669;
+            font-weight: 900;
+            text-decoration: none;
+            text-transform: uppercase;
+            border: 1px solid #059669;
+            padding: 8px 16px;
+            border-radius: 3px;
+        }
+
+        .favoriteProducts a:hover {
+            background-color: #059669;
+            color: white;
+        }
+
+.emptyFavorites {
+    color: #121331;
+    font-size: 16pt;
+    font-weight: 900;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}

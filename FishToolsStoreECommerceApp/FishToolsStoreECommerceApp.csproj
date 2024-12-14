@@ -120,19 +120,23 @@
     <Compile Include="Areas\ManagerPanel\Controllers\CategoryController.cs" />
     <Compile Include="Areas\ManagerPanel\Controllers\HomeController.cs" />
     <Compile Include="Areas\ManagerPanel\Controllers\LoginController.cs" />
+    <Compile Include="Areas\ManagerPanel\Controllers\MemberController.cs" />
     <Compile Include="Areas\ManagerPanel\Controllers\ProductController.cs" />
     <Compile Include="Areas\ManagerPanel\Controllers\SystemMessagesController.cs" />
     <Compile Include="Areas\ManagerPanel\Data\ViewModels\ManagerLoginViewModel.cs" />
     <Compile Include="Areas\ManagerPanel\Filters\ManagerAuthorizationFilterAttribute.cs" />
     <Compile Include="Areas\ManagerPanel\ManagerPanelAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Brand.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Favorites.cs" />
     <Compile Include="Models\FishToolsStoreModel.cs" />
     <Compile Include="Models\Manager.cs" />
     <Compile Include="Models\Member.cs" />
@@ -161,10 +165,16 @@
     <Content Include="Areas\ManagerPanel\Views\Product\AllIndex.cshtml" />
     <Content Include="Areas\ManagerPanel\Views\Product\Edit.cshtml" />
     <Content Include="Areas\ManagerPanel\Views\Product\Delete.cshtml" />
+    <Content Include="Areas\ManagerPanel\Views\Member\Index.cshtml" />
+    <Content Include="Areas\ManagerPanel\Views\Member\AllIndex.cshtml" />
+    <Content Include="Areas\ManagerPanel\Views\Member\Delete.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\_LayoutPage1.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Product\Detail.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Register\Index.cshtml" />
+    <Content Include="Views\Product\Favorites.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
