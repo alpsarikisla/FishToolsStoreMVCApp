@@ -1,0 +1,74 @@
+﻿@model FishToolsStoreECommerceApp.Models.Product
+@using FishToolsStoreECommerceApp.Models
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    List<Category> categories = ViewBag.categories as List<Category>;
+}
+
+<div class="breadCrumb">
+    <a href="@Url.Action("Index", "Home")">Anasayfa</a> >
+    <label>Ürünler</label> >
+    <label>@Model.Name</label>
+</div>
+
+<div class="mainBase">
+    <div class="categoriesBase">
+        <div class="title">
+            Kategoriler
+        </div>
+        <div class="content">
+            @foreach (var item in categories)
+            {
+                <a href="">@item.Name</a>
+            }
+        </div>
+    </div>
+    <div class="detailBase">
+        <div class="image">
+            <img src="~/Assets/ProductImages/@Model.Image" />
+        </div>
+        <div class="detail">
+            <div class="urunbaslik">
+                <h1>@Model.Name</h1>
+            </div>
+            <div style="margin-top:15px">
+
+                <label class="indirimli">
+                    @Model.Price,00 ₺
+                </label>
+                <label class="zamli">@Model.ListPrice,00 ₺</label>
+
+            </div>
+            <div class="detailCategory">
+                Kategori <a href="@Url.Action("Home","Index", new {id= Model.Category_ID})">@Model.Category.Name</a>
+                <a href="" style="margin-left:180px">
+                    Favorilere ekle
+                    <img src="~/Assets/PageImages/heart.png" width="16" style="margin-bottom:-4px;" />
+                </a>
+            </div>
+            <div class="detailsummary">
+                @Model.Summary
+            </div>
+
+            <div class="detailquantity">
+                @using (Html.BeginForm())
+                {
+                    <input type="number" class="quantity" value="1" />
+                    <input type="submit" class="addtoCart" value="Sepete Ekle" />
+                }
+            </div>
+
+        </div>
+        <div style="clear:both"></div>
+        <div class="detaildescription">
+            <h3>Ürün Detay</h3>
+            <div style="border-top:1px solid silver; padding-top:20px">
+                <p>
+                    @Model.Description
+                </p>
+            </div>
+        </div>
+    </div>
+    <div style="clear:both"></div>
+</div>

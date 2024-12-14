@@ -30,17 +30,19 @@
     <div class="productBase">
         @foreach (var item in Model)
         {
-            double zamliprice = item.Price + 105;//:D
+
             <div class="product">
-                <div class="image">
-                    <img src="~/Assets/ProductImages/@item.Image" />
-                </div>
-                <div class="name">
-                    @item.Name
-                </div>
-                <div class="price">
-                    @item.Price ₺ <label>@zamliprice ₺</label>
-                </div>
+                <a href="@Url.Action("Detail","Product", new {id=item.ID})" style="text-decoration:none">
+                    <div class="image">
+                        <img src="~/Assets/ProductImages/@item.Image" />
+                    </div>
+                    <div class="name">
+                        @item.Name
+                    </div>
+                    <div class="price">
+                        @item.Price ₺ <label>@item.ListPrice ₺</label>
+                    </div>
+                </a>
                 <div class="cart">
                     <a href="">Sepete Ekle</a>
                 </div>

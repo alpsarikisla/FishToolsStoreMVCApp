@@ -48,7 +48,7 @@
             </div>
             <div class="row">
                 @Html.LabelFor(model => model.Stock, htmlAttributes: new { @class = "control-label" })
-                @Html.EditorFor(model => model.Stock, new { htmlAttributes = new { @class = "form-control"} })
+                @Html.EditorFor(model => model.Stock, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Stock, "", new { @class = "text-danger" })
             </div>
             <div class="row">
@@ -62,6 +62,12 @@
                 @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
             </div>
             <div class="row">
+                @Html.LabelFor(model => model.ListPrice, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.ListPrice, new { htmlAttributes = new { @class = "form-control", @Value = "0" } })
+                @Html.ValidationMessageFor(model => model.ListPrice, "", new { @class = "text-danger" })
+            </div>
+           
+            <div class="row">
                 @Html.LabelFor(model => model.IsActive, htmlAttributes: new { @class = "control-label" })
                 @Html.EditorFor(model => model.IsActive) Aktif Ürün
                 @Html.ValidationMessageFor(model => model.IsActive, "", new { @class = "text-danger" })
@@ -70,20 +76,24 @@
                 <input type="submit" value="Ürün Düzenle" class="btn-default" />
             </div>
         </div>
-            <div class="right">
-               
-                <div class="row">
-                    @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label" })
-                    @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
-                </div>
-                <div class="row">
-                    <img src="~/Assets/ProductImages/@Model.Image" width="250" />
-                    @Html.LabelFor(model => model.Image, htmlAttributes: new { @class = "control-label" })
-                    <input type="file" name="productImage" class="form-control" />
-                    @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
-                </div>
+        <div class="right">
+            <div class="row">
+                @Html.LabelFor(model => model.Summary, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.Summary, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Summary, "", new { @class = "text-danger" })
             </div>
+            <div class="row">
+                @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+            </div>
+            <div class="row">
+                <img src="~/Assets/ProductImages/@Model.Image" width="250" />
+                @Html.LabelFor(model => model.Image, htmlAttributes: new { @class = "control-label" })
+                <input type="file" name="productImage" class="form-control" />
+                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+            </div>
+        </div>
             <div style="clear:both"></div>
         }
 

@@ -108,6 +108,8 @@
     <Content Include="Assets\css\UIMainStyle.css" />
     <Content Include="Assets\PageImages\banner.png" />
     <Content Include="Assets\PageImages\fishtools-logo.png" />
+    <Content Include="Assets\PageImages\heart%281%29.png" />
+    <Content Include="Assets\PageImages\heart.png" />
     <Content Include="Assets\ProductImages\d2895e9a-ee89-40ce-8315-b67009065d52.jpg" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -124,6 +126,7 @@
     <Compile Include="Areas\ManagerPanel\Filters\ManagerAuthorizationFilterAttribute.cs" />
     <Compile Include="Areas\ManagerPanel\ManagerPanelAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -161,6 +164,7 @@
     <None Include="packages.config" />
     <Content Include="Views\Shared\_LayoutPage1.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Product\Detail.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

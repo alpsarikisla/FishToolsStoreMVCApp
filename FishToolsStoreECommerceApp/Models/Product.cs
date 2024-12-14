@@ -19,7 +19,7 @@ namespace FishToolsStoreECommerceApp.Models
         public int ID { get; set; }
         public Nullable<int> Category_ID { get; set; }
 
-        [Display(Name ="Kategori")]
+        [Display(Name = "Kategori")]
         [ForeignKey("Category_ID")]
         public virtual Category Category { get; set; }
 
@@ -39,17 +39,25 @@ namespace FishToolsStoreECommerceApp.Models
         [StringLength(maximumLength: 20, ErrorMessage = "En fazla 20 karakter olabilir")]
         public string Barcode { get; set; }
 
-        [Required(ErrorMessage ="Bu alan zorunludur")]
+        [Required(ErrorMessage = "Bu alan zorunludur")]
         [StringLength(maximumLength: 150, ErrorMessage = "En fazla 150 karakter olabilir")]
         public string Name { get; set; }
 
         [Display(Name = "Açıklama")]
         [DataType(DataType.MultilineText)]
-        [StringLength(maximumLength: 500, ErrorMessage = "En fazla 500 karakter olabilir")]
         public string Description { get; set; }
 
+        [Display(Name = "Özet")]
+        [DataType(DataType.MultilineText)]
+        [StringLength(maximumLength: 500, ErrorMessage = "En fazla 500 karakter olabilir")]
+        public string Summary { get; set; }
+
         [Display(Name = "Fiyat")]
+
         public double Price { get; set; }
+
+        [Display(Name = "Liste Fiyat")]
+        public double ListPrice { get; set; }
 
         [Display(Name = "Stok")]
         public short Stock { get; set; }
