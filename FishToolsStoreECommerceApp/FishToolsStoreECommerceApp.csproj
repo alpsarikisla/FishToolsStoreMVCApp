@@ -105,11 +105,14 @@
     <Content Include="Areas\ManagerPanel\Assets\PageImages\high-angle-colorful-fishing-bait-with-net.jpg" />
     <Content Include="Areas\ManagerPanel\Assets\PageImages\http-404-not-found-error-dosya-bulunamadi-mesaji.jpg" />
     <Content Include="Areas\ManagerPanel\Assets\PageImages\User-Avatar-Profile-Clip-Art-Transparent-PNG.png" />
+    <Content Include="Assets\css\LoginStyle.css" />
     <Content Include="Assets\css\UIMainStyle.css" />
+    <Content Include="Assets\PageImages\2068-fishing.gif" />
     <Content Include="Assets\PageImages\banner.png" />
     <Content Include="Assets\PageImages\fishtools-logo.png" />
     <Content Include="Assets\PageImages\heart%281%29.png" />
     <Content Include="Assets\PageImages\heart.png" />
+    <Content Include="Assets\PageImages\high-angle-colorful-fishing-bait-with-net.jpg" />
     <Content Include="Assets\ProductImages\d2895e9a-ee89-40ce-8315-b67009065d52.jpg" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -120,19 +123,24 @@
     <Compile Include="Areas\ManagerPanel\Controllers\CategoryController.cs" />
     <Compile Include="Areas\ManagerPanel\Controllers\HomeController.cs" />
     <Compile Include="Areas\ManagerPanel\Controllers\LoginController.cs" />
+    <Compile Include="Areas\ManagerPanel\Controllers\MemberController.cs" />
     <Compile Include="Areas\ManagerPanel\Controllers\ProductController.cs" />
     <Compile Include="Areas\ManagerPanel\Controllers\SystemMessagesController.cs" />
     <Compile Include="Areas\ManagerPanel\Data\ViewModels\ManagerLoginViewModel.cs" />
     <Compile Include="Areas\ManagerPanel\Filters\ManagerAuthorizationFilterAttribute.cs" />
     <Compile Include="Areas\ManagerPanel\ManagerPanelAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MemberController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Data\ViewModels\MemberLoginViewModel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Brand.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Favorite.cs" />
     <Compile Include="Models\FishToolsStoreModel.cs" />
     <Compile Include="Models\Manager.cs" />
     <Compile Include="Models\Member.cs" />
@@ -161,10 +169,16 @@
     <Content Include="Areas\ManagerPanel\Views\Product\AllIndex.cshtml" />
     <Content Include="Areas\ManagerPanel\Views\Product\Edit.cshtml" />
     <Content Include="Areas\ManagerPanel\Views\Product\Delete.cshtml" />
+    <Content Include="Areas\ManagerPanel\Views\Member\Index.cshtml" />
+    <Content Include="Areas\ManagerPanel\Views\Member\Delete.cshtml" />
+    <Content Include="Areas\ManagerPanel\Views\Member\AllIndex.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\_LayoutPage1.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Product\Detail.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Login\Register.cshtml" />
+    <Content Include="Views\Member\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

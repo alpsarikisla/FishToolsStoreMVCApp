@@ -11,34 +11,35 @@ namespace FishToolsStoreECommerceApp.Models
         public Member()
         {
             CreationTime = DateTime.Now;
+            LastLoginTime = DateTime.Now;
             IsActive = true;
             IsDeleted = false;
         }
         public int ID { get; set; }
 
-        [Required(ErrorMessage = "Bu alan zorunludur")]
+        [Required(ErrorMessage = "İsim alanı zorunludur")]
         [Display(Name = "İsim")]
-        [StringLength(maximumLength: 75, ErrorMessage = "Bu alan en fazla 75 karakter olabilir")]
+        [StringLength(maximumLength: 75, ErrorMessage = "İsim alanı en fazla 75 karakter olabilir")]
         public string Name { get; set; }
 
-        [Required(ErrorMessage = "Bu alan zorunludur")]
+        [Required(ErrorMessage = "Soyisim alanı zorunludur")]
         [Display(Name = "Soyisim")]
-        [StringLength(maximumLength: 75, ErrorMessage = "Bu alan en fazla 75 karakter olabilir")]
+        [StringLength(maximumLength: 75, ErrorMessage = "Soyisim alanı en fazla 75 karakter olabilir")]
         public string Surname { get; set; }
 
-        [Required(ErrorMessage = "Bu alan zorunludur")]
+        [Required(ErrorMessage = "Kullanıcı Adı alanı zorunludur")]
         [Display(Name = "Kullanıcı Adı")]
-        [StringLength(maximumLength: 75, ErrorMessage = "Bu alan en fazla 75 karakter olabilir")]
+        [StringLength(maximumLength: 75, ErrorMessage = "Kullanıcı Adı alanı en fazla 75 karakter olabilir")]
         public string UserName { get; set; }
 
-        [Required(ErrorMessage = "Bu alan zorunludur")]
+        [Required(ErrorMessage = "E-Posta alanı zorunludur")]
         [Display(Name = "E-Posta")]
-        [StringLength(maximumLength: 150, ErrorMessage = "Bu alan en fazla 150 karakter olabilir")]
+        [StringLength(maximumLength: 254, ErrorMessage = "E-Posta alanı en fazla 254 karakter olabilir")]
         public string Mail { get; set; }
 
-        [Required(ErrorMessage = "Bu alan zorunludur")]
+        [Required(ErrorMessage = "Şifre alanı zorunludur")]
         [Display(Name = "Şifre")]
-        [StringLength(maximumLength: 20, MinimumLength = 6, ErrorMessage = "Bu alan 6 - 20 karakter olabilir")]
+        [StringLength(maximumLength: 20, MinimumLength = 6, ErrorMessage = "Şifre alanı 6 - 20 karakter olabilir")]
         public string Password { get; set; }
 
         [Display(Name = "Kayıt Tarihi")]

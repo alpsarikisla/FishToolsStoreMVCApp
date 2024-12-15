@@ -14,11 +14,25 @@ namespace FishToolsStoreECommerceApp
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                name: "Default",
+                name: "Home_Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
                  new[] { "FishToolsStoreECommerceApp.Controllers" }
             );
+
+            routes.MapRoute(
+                name: "Login_Default",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Login", action = "Index", id = UrlParameter.Optional },
+                new[] { "FishToolsStoreECommerceApp.Controllers" }
+                );
+
+            routes.MapRoute(
+                name: "Member_Default",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Member", action = "Index", id = UrlParameter.Optional },
+                new[] { "FishToolsStoreECommerceApp.Controllers" }
+                );
         }
     }
 }

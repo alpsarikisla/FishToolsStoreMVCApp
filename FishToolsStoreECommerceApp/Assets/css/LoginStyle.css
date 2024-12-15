@@ -1,0 +1,91 @@
+﻿body {
+    background-color: #DDDDDD;
+    font-family: Calibri;
+    background-image: url('../pageimages/high-angle-colorful-fishing-bait-with-net.jpg');
+    background-size: cover;
+}
+
+.panelContainer {
+    width: 400px;
+    padding: 40px 20px;
+    margin: 50px auto;
+    background-color: white;
+    border-radius: 15px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.48);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.48);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.48);
+}
+
+.loginImage {
+    text-align: center;
+}
+
+    .loginImage img {
+        width: 150px;
+    }
+
+.title {
+    height: 70px;
+    text-align: center;
+    color: #059669;
+    font-weight: 900;
+}
+
+.row {
+    padding: 15px 0;
+}
+
+.input {
+    background-color: #EFEFEF;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 15px 7px;
+    border: none;
+}
+
+.button {
+    background-color: #059669;
+    width: 100%;
+    color: white;
+    padding: 15px;
+    border: none;
+}
+
+.rounded {
+    border-radius: 5px;
+}
+
+.validation-summary-errors {
+    padding: 1px;
+    background-color: #f52f2f;
+    color: white;
+    border-radius: 5px;
+    font-weight: 900;
+}
+
+    .validation-summary-errors div {
+        padding: 20px;
+    }
+
+    .validation-summary-errors ul {
+        list-style-type: none;
+    }
+
+        .validation-summary-errors ul li {
+            margin-bottom: 5px;
+        }
+
+.page {
+    text-align: center;
+    margin-bottom:7px;
+}
+
+    .page a {
+        border-bottom: 2px solid silver;
+        text-decoration: none;
+        color: dimgray;
+        font-size: 17pt;
+        margin:0 7px;
+    }

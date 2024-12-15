@@ -42,10 +42,20 @@
             </div>
             <div class="detailCategory">
                 Kategori <a href="@Url.Action("Home","Index", new {id= Model.Category_ID})">@Model.Category.Name</a>
-                <a href="" style="margin-left:180px">
-                    Favorilere ekle
-                    <img src="~/Assets/PageImages/heart.png" width="16" style="margin-bottom:-4px;" />
-                </a>
+                @if (ViewBag.favorites != null)
+                {
+                    <a href="@Url.Action("RemoveFromFavorites", "Product", new { ID = Model.ID})" style="margin-left:180px">
+                        Favorilerden Çıkar
+                        <img src="~/Assets/PageImages/heart(1).png" width="16" style="margin-bottom:-4px;" />
+                    </a>
+                }
+                else
+                {
+                    <a href="@Url.Action("AddToFavorites","Product", new { ID = Model.ID})" style="margin-left:180px">
+                        Favorilere ekle
+                        <img src="~/Assets/PageImages/heart.png" width="16" style="margin-bottom:-4px;" />
+                    </a>
+                }
             </div>
             <div class="detailsummary">
                 @Model.Summary
