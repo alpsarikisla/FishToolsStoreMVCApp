@@ -54,5 +54,8 @@ namespace FishToolsStoreECommerceApp.Models
         [Display(Name = "Durum")]
         public bool IsActive { get; set; }
         public bool IsDeleted { get; set; }
+
+        public virtual ICollection<Favorites> Favorites { get; set; }
+        public virtual ICollection<ShoppingCart> ShoppingCart { get; set; }
     }
 }

@@ -450,7 +450,6 @@ body {
         }
 .favoriteProducts {
     width: 100%;
-    margin-top: 20px;
     border-collapse: collapse;
 }
 
@@ -474,15 +473,9 @@ body {
     }
 
         .favoriteProducts td img {
-            width: 100px;
+            width:50px;
         }
-    .favoriteProducts tr{
-
-    }
-        .favoriteProducts tr:hover{
-            background-color:#d7d5d5;
-        }
-
+   
         .favoriteProducts a {
             color: #059669;
             font-weight: 900;
@@ -505,4 +498,17 @@ body {
     margin-top: 20px;
     text-align: center;
     width: 100%;
+}
+.active{
+    background-color:#059669;
+    color:white !important;
+}
+.active:hover
+{
+    color:#046446 !important;
+}
+.profileBase {
+    width: 910px;
+    float: left;
+    padding-left:20px;
 }

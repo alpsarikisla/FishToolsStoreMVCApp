@@ -1,5 +1,12 @@
-﻿@{
-    FishToolsStoreECommerceApp.Models.Member user = Session["user"] as FishToolsStoreECommerceApp.Models.Member;
+﻿@using FishToolsStoreECommerceApp.Models
+@{
+    Member user = Session["user"] as Member;
+    SystemHelpers help = new SystemHelpers();
+    int count = 0;
+    if (Session["user"]!=  null)
+    {
+        count = help.getProductCount(user.ID);
+    }
 }
 <!DOCTYPE html>
 
@@ -41,7 +48,7 @@
             </div>
             <div class="right phoneAndCart">
                 <a href="" class="phone">+90222 220 25 76</a>
-                <a href="" class="cart">Sepetim (0) </a>
+                <a href="" class="cart">Sepetim (@count) </a>
             </div>
             <div style="clear:both"></div>
         </div>

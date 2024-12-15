@@ -20,6 +20,7 @@ namespace FishToolsStoreECommerceApp.Models
         public DbSet<Product> Products { get; set; }
         public DbSet<Member> Members { get; set; }
         public DbSet<Favorites> Favorites { get; set; }
+        public DbSet<ShoppingCart> ShoppingCarts { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

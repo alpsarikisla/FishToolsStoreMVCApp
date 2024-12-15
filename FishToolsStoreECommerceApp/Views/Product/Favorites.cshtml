@@ -6,32 +6,46 @@
 }
 
 
-
-<h2>Favoriler</h2>
-
-@if (Model != null && Model.Any())
-{
-    <table class="favoriteProducts">
-        <tr class="headerRow">
-            <th>Ürün Resmi</th>
-            <th>Ürün Adı</th>
-            <th>Özet</th>
-            <th>Fiyat</th>
-            <th>Detaylar</th>
-        </tr>
-        @foreach (var product in Model)
+<div class="breadCrumb">
+    <a href="@Url.Action("Index", "Home")">Anasayfa</a> >
+    <label>Profil</label> >
+    <label>Favariler</label>
+</div>
+<div class="mainBase">
+    <div class="categoriesBase">
+        <div class="title">
+            Kullanıcı Menüsü
+        </div>
+        <div class="content">
+            <a href="">Bilgilerim</a>
+            <a href="@Url.Action("Favorites","Product")" class="active">Favoriler</a>
+        </div>
+    </div>
+    <div class="profileBase">
+        @if (Model != null && Model.Any())
         {
-            <tr>
-                <td><img src="~/Assets/ProductImages/@product.Image" /></td>
-                <td>@product.Name</td>
-                <td>@product.Summary</td>
-                <td>@product.Price,00 ₺</td>
-                <td><a href="@Url.Action("Detail", "Product", new { id = product.ID })">Ürünü Görüntüle</a></td>
-            </tr>
+            <table class="favoriteProducts">
+                <tr class="headerRow">
+                    <th>Ürün Resmi</th>
+                    <th>Ürün Adı</th>
+                    <th>Fiyat</th>
+                    <th>Detaylar</th>
+                </tr>
+                @foreach (var product in Model)
+                {
+                    <tr>
+                        <td style="text-align:center"><img src="~/Assets/ProductImages/@product.Image"/></td>
+                        <td>@product.Name</td>
+                        <td>@product.Price,00 ₺</td>
+                        <td><a href="@Url.Action("Detail", "Product", new { id = product.ID })">Ürün'e git</a></td>
+                    </tr>
+                }
+            </table>
         }
-    </table>
-}
-else
-{
-    <p class="emptyFavorites">Favorilerinizde ürün bulunmamaktadır.</p>
-}
+        else
+        {
+            <p class="emptyFavorites">Favorilerinizde ürün bulunmamaktadır.</p>
+        }
+    </div>
+    <div style="clear:both"></div>
+</div>
