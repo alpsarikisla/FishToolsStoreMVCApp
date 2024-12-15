@@ -13,9 +13,16 @@
                 <strong>Hızlı ve Ücretsiz</strong> 2 Günde Siparişin Yanında...
             </div>
             <div class="right userbuttons">
-                <a href="">Takip Listem</a>
-                <a href="">Giriş Yap</a>/
-                <a href="" style="padding:0;">Üye Ol</a>
+                @if (Session["member"] == null)
+                {
+                    <a href="@Url.Action("Index","Login")">Giriş Yap</a>
+                    <a href="@Url.Action("Register","Login")" style="padding:0; margin-left:5px;">Üye Ol</a>
+                }
+                else
+                {
+                    <a href="">Takip Listem</a>
+                    <a href="@Url.Action("Profil","Member")">Profil</a>
+                }
             </div>
             <div style="clear:both"></div>
         </div>

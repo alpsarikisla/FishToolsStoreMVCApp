@@ -1,0 +1,81 @@
+﻿@model FishToolsStoreECommerceApp.Models.Member
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/ManagerPanel/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="breadCrumb">
+    <a href="@Url.Action("Index", "Home")">Anasayfa</a> >
+    <a href="@Url.Action("Index", "Member")">Üyeler</a> >
+    <label>Üye Sil</label>
+</div>
+
+<div class="pageContent">
+    <div class="pagetitle">
+        <h2>Üye Sil</h2>
+    </div>
+    <div class="formContent">
+        <h3>Bu üyeyi silmek istediğinize emin misiniz?</h3>
+        <table border="1" cellpadding="5" cellspacing="0" style="border:1px solid silver" width="600">
+            <tr>
+                <th align="left" width="30%">ID</th>
+                <td>@Model.ID</td>
+            </tr>
+            <tr>
+                <th align="left">Üye Adı</th>
+                <td>@Model.Name</td>
+            </tr>
+            <tr>
+                <th align="left">Üye Soyadı</th>
+                <td>@Model.Surname</td>
+            </tr>
+            <tr>
+                <th align="left">E - Posta</th>
+                <td>@Model.Mail</td>
+            </tr>
+            <tr>
+                <th align="left">Hesap Durum</th>
+                <td>
+                    @if (Model.IsActive)
+                    {
+                        <label>Aktif</label>
+                    }
+                    else
+                    {
+                        <label>Pasif</label>
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th align="left">Silinme Durumu</th>
+                <td>
+                    @if (Model.IsDeleted)
+                    {
+                        <label>Silinmiş</label>
+                    }
+                    else
+                    {
+                        <label>Silinmemiş</label>
+                    }
+                </td>
+            </tr>
+        </table>
+        @using (Html.BeginForm())
+        {
+            <div class="row">
+                <input type="submit" value="Üyeyi Sil" class="btn btn-default" />
+            </div>
+        }
+
+    </div>
+    <div class="formfooter">
+        @Html.ActionLink("Üye Listesine Dön", "Index")
+    </div>
+</div>
+@section styles
+{
+    <link href="~/Areas/ManagerPanel/Assets/css/FormStyle.css" rel="stylesheet" />
+}
+
+

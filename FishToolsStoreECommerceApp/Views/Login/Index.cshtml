@@ -1,0 +1,52 @@
+﻿@model FishToolsStoreECommerceApp.Data.ViewModels.MemberLoginViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Fish Tools Store Giriş</title>
+    <link href="~/Assets/css/LoginStyle.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="panelContainer">
+        <div class="page">
+            <a href="@Url.Action("Index","Login")" style="border-color:#059669">Giriş Yap</a>
+            <a href="@Url.Action("Register","Login")">Kayıt Ol</a>
+        </div>
+        <div class="loginImage">
+            <img src="~/Assets/PageImages/2068-fishing.gif" />
+        </div>
+        <div class="title">
+            <h1>Fish Tools Store Giriş</h1>
+        </div>
+        <div>
+            @using (Html.BeginForm())
+            {
+                @Html.ValidationSummary();
+                if (ViewBag.warning != null)
+                {
+                    <div class="validation-summary-errors">
+                        <div>@ViewBag.warning</div>
+                    </div>
+                }
+
+
+                <div class="row">
+                    @Html.EditorFor(x => x.Mail, new { htmlAttributes = new { @class = "input rounded", @placeholder = "Mail Adresiniz" } })
+
+                </div>
+                <div class="row">
+                    @Html.EditorFor(x => x.Password, new { htmlAttributes = new { @class = "input rounded", @placeholder = "Şifreniz" } })
+                </div>
+                <div class="row">
+                    <input type="submit" class="button rounded" value="Giriş Yap" />
+                </div>
+            }
+        </div>
+    </div>
+</body>
+</html>

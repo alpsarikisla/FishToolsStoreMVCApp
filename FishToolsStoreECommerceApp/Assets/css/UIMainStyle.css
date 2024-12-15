@@ -39,6 +39,10 @@ body {
         color: white;
     }
 
+        .userbuttons a:hover {
+            color: silver;
+        }
+
 .header {
     margin: 10px 0;
     padding: 10px 0;
@@ -84,6 +88,10 @@ body {
         text-transform: uppercase;
         display: table-cell
     }
+
+        .mainMenu a:hover {
+            color: silver;
+        }
 
 .indextop {
     border-top: 3px solid #121331;
@@ -179,10 +187,12 @@ body {
 
             .mainBase .productBase .product .image {
                 margin-top: 10px;
+                height: 200px;
             }
 
                 .mainBase .productBase .product .image img {
                     width: 100%;
+                    height: 100%;
                 }
 
             .mainBase .productBase .product .name {
@@ -283,42 +293,49 @@ body {
             background-color: #efefef;
             border-radius: 5px;
             padding: 10px;
+            word-wrap: break-word;
         }
 
         .detailBase .detail .detailCategory {
             margin-top: 15px;
-            color:dimgrey
-        }
-        .detailBase .detail .detailCategory a {
-           color:#046446;
-           text-decoration:none;
+            color: dimgrey
         }
 
+            .detailBase .detail .detailCategory a {
+                color: #046446;
+                text-decoration: none;
+            }
+
         .detailBase .detail .detailquantity {
-            margin-top:15px;
+            margin-top: 15px;
         }
+
             .detailBase .detail .detailquantity .quantity {
-                padding:10px;
+                padding: 10px;
             }
+
             .detailBase .detail .detailquantity .addtoCart {
-                padding:12px;
-                background-color:#059669;
-                color:white;
-                border:none;
-                width:250px;
-                border-radius:3px;
+                padding: 12px;
+                background-color: #059669;
+                color: white;
+                border: none;
+                width: 250px;
+                border-radius: 3px;
             }
-            .detailBase .detail .detailquantity .addtoCart:hover {
-                background-color:#046446;
-                cursor:pointer;
-            }
-        .detailBase .detaildescription{
-            margin-top:50px;
-            padding:20px;
-            color:dimgrey;
-            padding-top:0;
-        }
-    .detailBase .detaildescription h3{
-        padding-bottom:15px;
-        color:#121331;
+
+                .detailBase .detail .detailquantity .addtoCart:hover {
+                    background-color: #046446;
+                    cursor: pointer;
+                }
+
+    .detailBase .detaildescription {
+        margin-top: 50px;
+        padding: 20px;
+        color: dimgrey;
+        padding-top: 0;
     }
+
+        .detailBase .detaildescription h3 {
+            padding-bottom: 15px;
+            color: #121331;
+        }
