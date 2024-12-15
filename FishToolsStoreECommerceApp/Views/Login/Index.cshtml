@@ -1,0 +1,46 @@
+﻿@model FishToolsStoreECommerceApp.Models.Member
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="loginForm">
+    <h2>Giriş Yap</h2>
+    @using (Html.BeginForm())
+    {
+        if (ViewBag.Warning != null)
+        {
+            <div class="warningMessage">
+                <p>@ViewBag.Warning</p>
+            </div>
+        }
+
+        if (ViewBag.Success != null)
+        {
+            <div class="successMessage">
+                <p>@ViewBag.Success</p>
+            </div>
+        }
+
+        <div class="row">
+            @Html.LabelFor(model => model.UserName)
+            @Html.TextBoxFor(model => model.UserName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.UserName)
+        </div>
+
+        <div class="row">
+            @Html.LabelFor(model => model.Password)
+            @Html.PasswordFor(model => model.Password, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Password)
+        </div>
+
+        <div class="row">
+            <button type="submit" class="btn">Giriş Yap</button>
+        </div>
+
+        <div class="row">
+            <a href="@Url.Action("Index", "Register")">Üye Olmak İçin Tıklayın</a>
+        </div>
+    }
+</div>
+

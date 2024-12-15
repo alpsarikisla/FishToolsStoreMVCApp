@@ -1,0 +1,37 @@
+﻿
+@model List<FishToolsStoreECommerceApp.Models.Product>
+@{
+    ViewBag.Title = "Favorites";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+
+<h2>Favoriler</h2>
+
+@if (Model != null && Model.Any())
+{
+    <table class="favoriteProducts">
+        <tr class="headerRow">
+            <th>Ürün Resmi</th>
+            <th>Ürün Adı</th>
+            <th>Özet</th>
+            <th>Fiyat</th>
+            <th>Detaylar</th>
+        </tr>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td><img src="~/Assets/ProductImages/@product.Image" /></td>
+                <td>@product.Name</td>
+                <td>@product.Summary</td>
+                <td>@product.Price,00 ₺</td>
+                <td><a href="@Url.Action("Detail", "Product", new { id = product.ID })">Ürünü Görüntüle</a></td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <p class="emptyFavorites">Favorilerinizde ürün bulunmamaktadır.</p>
+}

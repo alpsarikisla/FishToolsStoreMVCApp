@@ -1,0 +1,62 @@
+﻿@model FishToolsStoreECommerceApp.Models.Member
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+<div class="registerForm">
+    <h2>Üye Kayıt</h2>
+    @using (Html.BeginForm())
+    {
+        if (ViewBag.Warning != null)
+        {
+            <div class="warningMessage">
+                <p>@ViewBag.Warning</p>
+            </div>
+        }
+
+        if (ViewBag.Success != null)
+        {
+            <div class="successMessage">
+                <p>@ViewBag.Success</p>
+            </div>
+        }
+        <div class="row">
+            @Html.LabelFor(model => model.Name)
+            @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="row">
+            @Html.LabelFor(model => model.Surname)
+            @Html.TextBoxFor(model => model.Surname, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Surname)
+        </div>
+
+        <div class="row">
+            @Html.LabelFor(model => model.UserName)
+            @Html.TextBoxFor(model => model.UserName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.UserName)
+        </div>
+
+        <div class="row">
+            @Html.LabelFor(model => model.Mail)
+            @Html.TextBoxFor(model => model.Mail, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Mail)
+        </div>
+
+        <div class="row">
+            @Html.LabelFor(model => model.Password)
+            @Html.PasswordFor(model => model.Password, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Password)
+        </div>
+
+        <div class="row">
+            <button type="submit" class="btn">Kayıt Ol</button>
+        </div>
+
+
+    }
+</div>
+

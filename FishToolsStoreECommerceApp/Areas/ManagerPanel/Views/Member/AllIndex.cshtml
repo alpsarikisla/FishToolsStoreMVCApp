@@ -1,0 +1,152 @@
+﻿@model IEnumerable<FishToolsStoreECommerceApp.Models.Member>
+@{
+    ViewBag.Title = "AllIndex";
+    Layout = "~/Areas/ManagerPanel/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="breadCrumb">
+    <a href="@Url.Action("Index", "Home")">Anasayfa</a> >
+    <label>Üyeler</label>
+</div>
+
+<div class="pageContent">
+    <div class="pagetitle">
+        <h2>Üye Listesi</h2>
+        <div style="clear:both"></div>
+    </div>
+    <div class="tableContent">
+        <table class="table">
+            <tr>
+                <th style="border-left:none">
+                    Üye No
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Surname)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UserName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Mail)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreationTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LastLoginTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IsActive)
+                </th>
+                <th>Seçenekler</th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                if (item.IsDeleted)
+                {
+                    <tr style="background-color:#ffdede">
+                        <td style="border-left:none">@item.ID</td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Surname)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UserName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Mail)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CreationTime)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LastLoginTime)
+                        </td>
+                        <td>
+                            @if (item.IsActive)
+                            {
+                                <label>Aktif</label>
+                            }
+                            else
+                            {
+                                <label>Pasif</label>
+                            }
+                        </td>
+                        <td>
+                            <a href="@Url.Action("ReDelete", "Member", new { id = item.ID })" class="btndetail">Silme İşlemini Geri Al</a>
+                        </td>
+                    </tr>
+                }
+                else
+                {
+                    <tr>
+                        <td style="border-left:none">@item.ID</td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Surname)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UserName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Mail)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CreationTime)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LastLoginTime)
+                        </td>
+                        <td>
+                            @if (item.IsActive)
+                            {
+                                <label>Aktif</label>
+                            }
+                            else
+                            {
+                                <label>Pasif</label>
+                            }
+                        </td>
+                        <td>
+                            @using (Html.BeginForm("UpdateStatus", "Member", FormMethod.Post))
+                            {
+                                @Html.AntiForgeryToken()
+                                @Html.Hidden("id", item.ID)
+                                @Html.Hidden("isActive", item.IsActive)
+
+                                <button type="submit" class="btnedit">
+                                    @if (item.IsActive)
+                                    {
+                                        <span>Pasif Yap</span>
+                                    }
+                                    else
+                                    {
+                                        <span>Aktif Yap</span>
+                                    }
+                                </button>
+                            }
+
+                            <a href="@Url.Action("Delete", "Member", new { id = item.ID })" class="btndelete">Sil</a>
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+    <div class="tablefooter">
+        <a href="@Url.Action("AllIndex", "Member")">Tüm Üyeleri Listele</a>
+    </div>
+</div>
+
+@section styles
+{
+    <link href="~/Areas/ManagerPanel/Assets/css/TableStyle.css" rel="stylesheet" />
+}
