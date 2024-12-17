@@ -46,12 +46,12 @@
                 <a href="@Url.Action("AddToFavorites", "Product", new { productId = Model.ID })" style="margin-left:180px">
                     @if (ViewBag.IsFavorite == true)
                     {
-                        <img src="~/Assets/PageImages/heart(1).png" width="16" style="margin-bottom:-4px;" />
+                        <img src="~/Assets/PageImages/heart(1).png" width="16" style="margin-bottom: -4px; margin-left: -10px;" />
                         <label>Favorilere Ekle</label>
                     }
                     else
                     {
-                        <img src="~/Assets/PageImages/heart.png" width="16" style="margin-bottom:-4px;" />
+                        <img src="~/Assets/PageImages/heart.png" width="16" style="margin-bottom:-4px;margin-left:-10px;" />
                         <label>Favorilere Ekle</label>
                     }
                 </a>
@@ -61,10 +61,10 @@
             </div>
 
             <div class="detailquantity">
-                @using (Html.BeginForm())
+                @using (Html.BeginForm("AddToCart", "ShoppingCart", FormMethod.Post))
                 {
-                    <input type="number" class="quantity" value="1" />
-                    <input type="submit" class="addtoCart" value="Sepete Ekle" />
+                    <input type="number" name="quantity" class="quantity" value="1" />
+                    <a href="@Url.Action("AddToCart","ShoppingCart",new {id = Model.ID})" class="addtoCart">Sepete Ekle</a>
                 }
             </div>
 
