@@ -59,6 +59,7 @@ namespace FishToolsStoreECommerceApp.Controllers
 
             return View(favoriteProducts);
         }
+        
         public ActionResult AddToFavorites(int productId)
         {
             var member = Session["user"] as Member;

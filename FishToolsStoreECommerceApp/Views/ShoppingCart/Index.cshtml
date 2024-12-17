@@ -1,8 +1,65 @@
 ﻿
+@model IEnumerable<FishToolsStoreECommerceApp.Models.ShoppingCart>
+@using FishToolsStoreECommerceApp.Models;
 @{
+    Member user = Session["user"] as Member;
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    FishToolsStoreModel db = new FishToolsStoreModel();
 }
 
-<h2>Index</h2>
+<div class="breadCrumb">
+    <a href="@Url.Action("Index", "Home")">Anasayfa</a> >
+    <label>Profil</label> >
+    <label>Sepetim</label>
+</div>
+<div class="mainBase">
+    <div class="categoriesBase">
+        <div class="title">
+            Kullanıcı Menüsü
+        </div>
+        <div class="content">
+            <a href="">Bilgilerim</a>
+            <a href="@Url.Action("Favorites","Product")">Favoriler</a>
+            <a href="@Url.Action("Index","ShoppingCart")" class="active">Sepetim</a>
+        </div>
+    </div>
+    <div class="profileBase">
+        @if (Model != null && Model.Any())
+        {
+            <table class="favoriteProducts">
+                <tr class="headerRow">
+                    <th>Ürün Resmi</th>
+                    <th>Ürün Adı</th>
+                    <th>Fiyat</th>
+                    <th>Detaylar</th>
+                    <th>Adet</th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td style="text-align:center"><img src="~/Assets/ProductImages/@item.Product.Image" /></td>
+                        <td>@item.Product.Name</td>
+                        <td>@item.Product.Price,00 ₺</td>
+                        <td style="text-align:center"><a href="@Url.Action("Detail", "Product", new { id = item.ID })" >Ürün'e git</a></td>
+                        <td>
+                            <input type="number" style="width:50px;font-size:15pt;" value="@item.Quantity" /> 
+                            <a href="@Url.Action("DeleteFromCart", "ShoppingCart", new { id = item.ID })" class="btndel">X</a>
+                        </td>
+                    </tr>
+                }
+            </table>
+            <div>
+                <a href="#" class="btnforward">Ödeme Sayfasına İlerle</a>
+            </div>
+        }
+        else
+        {
+            <p class="emptyFavorites">Sepetinizde ürün bulunmamaktadır.</p>
+        }
+    </div>
+    <div style="clear:both"></div>
+</div>
+
+
 

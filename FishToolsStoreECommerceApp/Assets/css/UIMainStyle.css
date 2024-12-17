@@ -307,6 +307,7 @@ body {
                 border:none;
                 width:250px;
                 border-radius:3px;
+                text-decoration:none;
             }
             .detailBase .detail .detailquantity .addtoCart:hover {
                 background-color:#046446;
@@ -512,3 +513,27 @@ body {
     float: left;
     padding-left:20px;
 }
+.btndel{
+    margin-left:20px;
+    margin-right:-40px;
+}
+.btndel:hover{
+    color:white;
+    background-color:darkred !important;
+}
+.btnforward {
+    color: white;
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid #059669;
+    padding: 8px 16px;
+    border-radius: 3px;
+    margin-top: 20px;
+    float: right;
+    background-color: #059669;
+}
+    .btnforward:hover {
+        color: #059669;
+        background-color:white;
+    }

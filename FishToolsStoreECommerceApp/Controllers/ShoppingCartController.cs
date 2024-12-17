@@ -15,14 +15,14 @@ namespace FishToolsStoreECommerceApp.Controllers
             if (Session["user"] != null)
             {
                 int id = (Session["user"] as Member).ID;
-                return View(db.ShoppingCarts.Where(s => s.Member_ID == id));
+                return View(db.ShoppingCarts.Where(s => s.Member_ID == id).ToList());
             }
             else
             {
                 return RedirectToAction("Index", "Login");
             }
         }
-       
+
         public ActionResult AddToCart(int id)
         {
             if (Session["user"] != null)
@@ -40,5 +40,21 @@ namespace FishToolsStoreECommerceApp.Controllers
             }
             return RedirectToAction("Index", "ShoppingCart");
         }
+        public ActionResult DeleteFromCart(int id)
+        {
+            if (Session["user"] != null)
+            {
+                ShoppingCart sc = db.ShoppingCarts.Find(id);
+                db.ShoppingCarts.Remove(sc);
+                db.SaveChanges();
+            }
+            else
+            {
+                return RedirectToAction("Index", "Login");
+            }
+            return RedirectToAction("Index", "ShoppingCart");
+        }
+
+
     }
 }
