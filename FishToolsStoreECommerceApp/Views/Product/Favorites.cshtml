@@ -9,7 +9,7 @@
 <div class="breadCrumb">
     <a href="@Url.Action("Index", "Home")">Anasayfa</a> >
     <label>Profil</label> >
-    <label>Favariler</label>
+    <label>Favoriler</label>
 </div>
 <div class="mainBase">
     <div class="categoriesBase">
@@ -17,18 +17,19 @@
             Kullanıcı Menüsü
         </div>
         <div class="content">
-            <a href="">Bilgilerim</a>
+            <a href="@Url.Action("Edit","Member")">Bilgilerim</a>
             <a href="@Url.Action("Favorites","Product")" class="active">Favoriler</a>
+            <a href="@Url.Action("Index","ShoppingCart")">Sepetim</a>
         </div>
     </div>
-    <div class="profileBase">
+    <div class="favoriteBase">
         @if (Model != null && Model.Any())
         {
             <table class="favoriteProducts">
                 <tr class="headerRow">
-                    <th>Ürün Resmi</th>
+                    <th>ÜRÜN RESMİ</th>
                     <th>Ürün Adı</th>
-                    <th>Fiyat</th>
+                    <th>FİYAT</th>
                     <th>Detaylar</th>
                 </tr>
                 @foreach (var product in Model)

@@ -61,9 +61,10 @@
             </div>
 
             <div class="detailquantity">
-                @using (Html.BeginForm())
+                @using (Html.BeginForm("AddToCart", "ShoppingCart", FormMethod.Post))
                 {
-                    <input type="number" class="quantity" value="1" />
+                    @Html.Hidden("id", Model.ID) 
+                    <input type="number" name="quantity" class="quantity" value="1" min="1" />
                     <input type="submit" class="addtoCart" value="Sepete Ekle" />
                 }
             </div>

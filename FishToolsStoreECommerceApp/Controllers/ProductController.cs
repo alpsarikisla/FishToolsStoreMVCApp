@@ -31,10 +31,10 @@ namespace FishToolsStoreECommerceApp.Controllers
 
             ViewBag.categories = db.Categories.Where(p => p.IsDeleted == false && p.IsActive == true).ToList();
 
-            var member = Session["user"] as Member;
+            Member member = Session["user"] as Member;
             if (member != null)
             {
-                var favorite = db.Favorites.FirstOrDefault(f => f.Member_ID == member.ID && f.Product_ID == model.ID);
+                Favorites favorite = db.Favorites.FirstOrDefault(f => f.Member_ID == member.ID && f.Product_ID == model.ID);
                 ViewBag.IsFavorite = favorite != null;
             }
             else
@@ -46,13 +46,13 @@ namespace FishToolsStoreECommerceApp.Controllers
         }
         public ActionResult Favorites()
         {
-            var member = Session["user"] as Member;
+            Member member = Session["user"] as Member;
             if (member == null)
             {
                 return RedirectToAction("Index", "Login");
             }
 
-            var favoriteProducts = db.Favorites
+            List<Product> favoriteProducts = db.Favorites
                                     .Where(f => f.Member_ID == member.ID)
                                     .Select(f => f.Product)
                                     .ToList();
@@ -61,11 +61,11 @@ namespace FishToolsStoreECommerceApp.Controllers
         }
         public ActionResult AddToFavorites(int productId)
         {
-            var member = Session["user"] as Member;
+            Member member = Session["user"] as Member;
 
             if (member != null)
             {
-                var favorite = db.Favorites.FirstOrDefault(f => f.Member_ID == member.ID && f.Product_ID == productId);
+                Favorites favorite = db.Favorites.FirstOrDefault(f => f.Member_ID == member.ID && f.Product_ID == productId);
 
                 bool isFavorite;
 

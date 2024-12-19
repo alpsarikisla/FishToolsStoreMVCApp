@@ -1,6 +1,7 @@
 ﻿using FishToolsStoreECommerceApp.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -18,7 +19,7 @@ namespace FishToolsStoreECommerceApp.Controllers
         [HttpPost]
         public ActionResult Index(string userName, string password)
         {
-            var user = db.Members.FirstOrDefault(m => m.UserName == userName || m.Mail == userName);
+            Member user = db.Members.FirstOrDefault(m => m.UserName == userName || m.Mail == userName);
 
             if (user != null && user.Password == password)
             {
@@ -45,6 +46,8 @@ namespace FishToolsStoreECommerceApp.Controllers
             Session["user"] = null;
             return RedirectToAction("Index", "Home");
         }
+     
     }
+    
 
 }

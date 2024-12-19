@@ -26,7 +26,7 @@
                 <a href="">Takip Listem</a>
                 @if (Session["user"] != null)
                 {
-                    <a href="@Url.Action("Favorites", "Product")">Favorilerim</a>
+                    <a href="@Url.Action("Favorites", "Product")">Hesabım</a>
                     <a href="@Url.Action("Logout", "Login")">Çıkış Yap</a>
                     <span>@user.Name @user.Surname</span>
 
@@ -48,7 +48,7 @@
             </div>
             <div class="right phoneAndCart">
                 <a href="" class="phone">+90222 220 25 76</a>
-                <a href="" class="cart">Sepetim (@count) </a>
+                <a href="@Url.Action("Index","ShoppingCart")" class="cart">Sepetim (@count) </a>
             </div>
             <div style="clear:both"></div>
         </div>

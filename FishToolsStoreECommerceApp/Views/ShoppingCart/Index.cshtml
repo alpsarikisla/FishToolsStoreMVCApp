@@ -1,8 +1,96 @@
-﻿
+﻿@model List<FishToolsStoreECommerceApp.Models.ShoppingCart>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+
 }
 
-<h2>Index</h2>
+<div class="breadCrumb">
+    <a href="@Url.Action("Index", "Home")">Anasayfa</a> >
+    <label>Profil</label> >
+    <label>Sepetim</label>
+</div>
 
+<div class="mainBase">
+    <div class="categoriesBase">
+        <div class="title">Kullanıcı Menüsü</div>
+        <div class="content">
+            <a href="@Url.Action("Edit","Member")">Bilgilerim</a>
+            <a href="@Url.Action("Favorites","Product")">Favoriler</a>
+            <a href="@Url.Action("Index","ShoppingCart")" class="active">Sepetim</a>
+        </div>
+    </div>
+
+    <div class="cartBase">
+        @if (Model != null && Model.Any())
+        {
+            <form method="post" action="@Url.Action("UpdateCart", "ShoppingCart")">
+                <table class="cartProducts" border="1" cellpadding="5" cellspacing="0">
+                    <tr class="headerRow">
+                        <th>ÜRÜN RESMİ</th>
+                        <th>Ürün Adı</th>
+                        <th>FİYAT</th>
+                        <th>MİKTAR</th>
+                        <th>Toplam</th>
+                        <th>Detaylar</th>
+                    </tr>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td style="text-align:center">
+                                <img src="~/Assets/ProductImages/@item.Product.Image" width="100" />
+                            </td>
+                            <td>@item.Product.Name</td>
+                            <td>@item.Product.Price,00 ₺</td>
+                            <td>
+                                <a href="@Url.Action("ChangeQuantity", "ShoppingCart", new { productId = item.Product.ID, increase = false })">-</a>
+                                <input type="text" value="@item.Quantity" style="width: 37px; height:37px; text-align: center;" />
+                                <a href="@Url.Action("ChangeQuantity", "ShoppingCart", new { productId = item.Product.ID, increase = true })">+</a>
+                            </td>
+                            <td>@(item.Quantity * item.Product.Price),00 ₺</td>
+                            <td>
+                                <a href="@Url.Action("Detail", "Product", new { id = item.Product.ID })">ÜRÜNE GİT</a>
+                                <a href="@Url.Action("DeleteCart", "ShoppingCart", new { productId = item.Product.ID })">
+                                    <img src="~/Assets/PageImages/bin.png" style="width: 20px; height: 20px;" />
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </table>
+
+                <div class="totalPrice">
+                    @if (ViewBag.Error != null)
+                    {
+                        <div>
+                            @ViewBag.Error
+                        </div>
+                    }
+                    <strong>Toplam Tutar: </strong>
+                    <span>
+                        @{
+                            decimal totalPrice = 0;
+                            foreach (var item in Model)
+                            {
+                                totalPrice += item.Quantity * (decimal)item.Product.Price;
+                            }
+                        }
+                        @totalPrice,00 ₺
+                    </span>
+                </div>
+
+               
+
+                <br /><br />
+                <div class="checkoutButton">
+                    <a href="@Url.Action("Checkout", "ShoppingCart")" class="btn">Ödeme Ekranına Geç</a>
+                </div>
+            </form>
+        }
+        else
+        {
+            <p class="emptyCart">Sepetinizde ürün bulunmamaktadır.</p>
+        }
+    </div>
+</div>
+
+<div style="clear:both"></div>
