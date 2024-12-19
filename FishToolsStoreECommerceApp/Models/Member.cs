@@ -13,6 +13,7 @@ namespace FishToolsStoreECommerceApp.Models
             CreationTime = DateTime.Now;
             IsActive = true;
             IsDeleted = false;
+            LastLoginTime = DateTime.Now;
         }
         public int ID { get; set; }
 
