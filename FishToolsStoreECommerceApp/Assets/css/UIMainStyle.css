@@ -307,7 +307,6 @@ body {
                 border:none;
                 width:250px;
                 border-radius:3px;
-                text-decoration:none;
             }
             .detailBase .detail .detailquantity .addtoCart:hover {
                 background-color:#046446;
@@ -477,7 +476,7 @@ body {
             width:50px;
         }
    
-        .favoriteProducts .btnfav {
+        .favoriteProducts a {
             color: #059669;
             font-weight: 900;
             text-decoration: none;
@@ -487,10 +486,10 @@ body {
             border-radius: 3px;
         }
 
-    .favoriteProducts .btnfav:hover {
-        background-color: #059669;
-        color: white;
-    }
+        .favoriteProducts a:hover {
+            background-color: #059669;
+            color: white;
+        }
 
 .emptyFavorites {
     color: #121331;
@@ -508,37 +507,223 @@ body {
 {
     color:#046446 !important;
 }
-.profileBase {
+.favoriteBase {
     width: 910px;
     float: left;
-    padding-left:20px;
+    padding-left: 20px;
 }
-.btndel {
-    margin-left: 10px;
-    margin-right: -40px;
-    color: #059669;
-    text-decoration: none;
-    border: 1px solid #059669;
-    padding: 3px 10px;
-    border-radius: 3px;
+.profileBase {
+    width: 810px;
+    float: left;
+    background-color: #fff;
+    border-radius: 7px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-left:40px;
+    margin-bottom:20px;
 }
-.btndel:hover{
-    color:white;
-    background-color:darkred !important;
+
+    .profileBase h2 {
+        color: #121331;
+        text-align:center;
+        font-size: 15pt;
+        font-weight: 900;
+        margin-bottom: 15px;
+    }
+
+    .profileBase .row {
+        margin-bottom: 15px;
+    }
+
+    .profileBase label {
+        font-weight: bold;
+        color: #121331;
+        font-size: 12pt;
+    }
+
+    .profileBase .form-control {
+        width: 790px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 12pt;
+        margin-top: 5px;
+    }
+
+    .profileBase .text-danger {
+        font-size: 11pt; 
+        color:red;
+    }
+
+.successMessage,
+.warningMessage {
+    padding: 12px;
+    margin: 15px 0; 
+    border-radius: 5px;
 }
-.btnforward {
+
+.successMessage {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.warningMessage {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.profileBase .btn {
+    background-color: #059669;
     color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14pt; 
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+    .profileBase .btn:hover {
+        background-color: #046446;
+    }
+.cartBase {
+    width: 910px;
+    float: left;
+    padding-left: 20px;
+    margin-bottom:20px;
+}
+
+.cartProducts {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .cartProducts .headerRow th {
+        background-color: #059669;
+        color: white;
+        font-weight: 900;
+        text-transform: uppercase;
+        padding: 12px;
+        text-align: left;
+        border: 1px solid silver;
+    }
+
+    .cartProducts th,
+    .cartProducts td {
+        padding: 12px;
+        text-align: left;
+        border: 1px solid silver;
+        font-size: 14pt;
+        color: #121331;
+    }
+
+        .cartProducts td img {
+            width: 50px;
+        }
+
+    .cartProducts a {
+        color: #059669;
+        font-weight: 900;
+        text-decoration: none;
+        text-transform: uppercase;
+        border: 1px solid #059669;
+        padding: 8px 16px;
+        border-radius: 3px;
+    }
+
+        .cartProducts a:hover {
+            background-color: #059669;
+            color: white;
+        }
+
+.emptyCart {
+    color: #121331;
+    font-size: 16pt;
+    font-weight: 900;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.cartBase .btn {
+    background-color: #059669;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16pt;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+    .cartBase .btn:hover {
+        background-color: #046446;
+    }
+
+.totalPrice {
+    font-size: 17pt;
+    color: #121331;
+    font-weight: 900;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    text-align: right;
+}
+
+    .totalPrice strong {
+        color: #059669;
+    }
+
+.checkoutButton {
+    text-align: right;
+    margin-top: 20px;
+}
+
+    .checkoutButton .btn {
+        background-color: #059669;
+        color: white;
+        padding: 12px 30px;
+        border-radius: 5px;
+        font-size: 16pt;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+        .checkoutButton .btn:hover {
+            background-color: #046446;
+        }
+
+.cartProducts .btn {
+    background-color: #059669;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 3px;
+    font-size: 14pt;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+    .cartProducts .btn:hover {
+        background-color: #046446;
+    }
+
+.cartProducts a {
+    color: #059669;
     font-weight: 900;
     text-decoration: none;
     text-transform: uppercase;
-    border: 1px solid #059669;
     padding: 8px 16px;
+    border: 1px solid #059669;
     border-radius: 3px;
-    margin-top: 20px;
-    float: right;
-    background-color: #059669;
 }
-    .btnforward:hover {
-        color: #059669;
-        background-color:white;
+
+    .cartProducts a:hover {
+        background-color: #059669;
+        color: white;
     }
+    
+

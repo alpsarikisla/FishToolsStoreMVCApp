@@ -26,7 +26,7 @@
                 <a href="">Takip Listem</a>
                 @if (Session["user"] != null)
                 {
-                    <a href="@Url.Action("Favorites", "Product")">Favorilerim</a>
+                    <a href="@Url.Action("Favorites", "Product")">Hesabım</a>
                     <a href="@Url.Action("Logout", "Login")">Çıkış Yap</a>
                     <span>@user.Name @user.Surname</span>
 
@@ -44,7 +44,7 @@
     <div class="boxedlayout">
         <div class="header">
             <div class="left logo">
-                <a href="@Url.Action("Index","Home")"><img src="~/Assets/PageImages/fishtools-logo.png" /></a>
+                <img src="~/Assets/PageImages/fishtools-logo.png" />
             </div>
             <div class="right phoneAndCart">
                 <a href="" class="phone">+90222 220 25 76</a>

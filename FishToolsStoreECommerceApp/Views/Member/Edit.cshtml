@@ -1,0 +1,84 @@
+﻿@model FishToolsStoreECommerceApp.Models.Member
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="breadCrumb">
+    <a href="@Url.Action("Index", "Home")">Anasayfa</a> >
+    <label>Profil</label> >
+    <label>Bilgilerim</label>
+</div>
+
+<div class="mainBase">
+    <div class="categoriesBase">
+        <div class="title">
+            Kullanıcı Menüsü
+        </div>
+        <div class="content">
+            <a href="@Url.Action("Edit", "Member")"class="active">Bilgilerim</a>
+            <a href="@Url.Action("Favorites", "Product")" >Favoriler</a>
+            <a href="@Url.Action("AddtoCart", "ShoppingCart")">Sepetim</a>
+        </div>
+    </div>
+
+    <div class="profileBase">
+        <h2>Profil Bilgilerini Düzenle</h2>
+
+        @using (Html.BeginForm("Edit", "Member", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(model => model.ID)
+            if (ViewBag.Success != null)
+            {
+                <div class="successMessage">
+                    <p>@ViewBag.Success</p>
+                </div>
+            }
+
+            if (ViewBag.Warning != null)
+            {
+                <div class="warningMessage">
+                    <p>@ViewBag.Warning</p>
+                </div>
+            }
+
+            <div class="row">
+                @Html.LabelFor(model => model.Name, "Ad")
+                @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="row">
+                @Html.LabelFor(model => model.Surname, "Soyad")
+                @Html.TextBoxFor(model => model.Surname, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Surname, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="row">
+                @Html.LabelFor(model => model.UserName, "Kullanıcı Adı")
+                @Html.TextBoxFor(model => model.UserName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="row">
+                @Html.LabelFor(model => model.Mail, "E-Posta")
+                @Html.TextBoxFor(model => model.Mail, new { @class = "form-control", @type = "email" })
+                @Html.ValidationMessageFor(model => model.Mail, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="row">
+                @Html.LabelFor(model => model.Password, "Şifre")
+                @Html.PasswordFor(model => model.Password, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="row">
+                <button type="submit" class="btn">Bilgileri Güncelle</button>
+            </div>
+        }
+
+        <div style="clear:both"></div>
+    </div>
+</div>
+

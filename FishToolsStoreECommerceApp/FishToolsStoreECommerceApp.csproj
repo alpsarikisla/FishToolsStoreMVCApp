@@ -107,6 +107,7 @@
     <Content Include="Areas\ManagerPanel\Assets\PageImages\User-Avatar-Profile-Clip-Art-Transparent-PNG.png" />
     <Content Include="Assets\css\UIMainStyle.css" />
     <Content Include="Assets\PageImages\banner.png" />
+    <Content Include="Assets\PageImages\bin.png" />
     <Content Include="Assets\PageImages\fishtools-logo.png" />
     <Content Include="Assets\PageImages\heart%281%29.png" />
     <Content Include="Assets\PageImages\heart.png" />
@@ -128,6 +129,7 @@
     <Compile Include="Areas\ManagerPanel\ManagerPanelAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MemberController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
@@ -179,6 +181,7 @@
     <Content Include="Views\Register\Index.cshtml" />
     <Content Include="Views\Product\Favorites.cshtml" />
     <Content Include="Views\ShoppingCart\Index.cshtml" />
+    <Content Include="Views\Member\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -44,7 +44,7 @@
                     </div>
                 </a>
                 <div class="cart">
-                    <a href="@Url.Action("AddToCart","ShoppingCart", new {id = item.ID})">Sepete Ekle</a>
+                    <a href="@Url.Action("AddToCart", "ShoppingCart", new { id = item.ID, quantity = 1 })">Sepete Ekle</a>
                 </div>
             </div>
 
