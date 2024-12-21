@@ -44,7 +44,7 @@
                             <td>@item.Product.Price,00 ₺</td>
                             <td>
                                 <a href="@Url.Action("ChangeQuantity", "ShoppingCart", new { productId = item.Product.ID, increase = false })">-</a>
-                                <input type="text" value="@item.Quantity" style="width: 37px; height:37px; text-align: center;" />
+                                <input type="text" value="@item.Quantity" readonly style="width: 37px; height:37px; text-align: center;" />
                                 <a href="@Url.Action("ChangeQuantity", "ShoppingCart", new { productId = item.Product.ID, increase = true })">+</a>
                             </td>
                             <td>@(item.Quantity * item.Product.Price),00 ₺</td>
