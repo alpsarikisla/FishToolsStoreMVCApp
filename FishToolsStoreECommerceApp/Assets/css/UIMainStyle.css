@@ -696,7 +696,9 @@ body {
         .checkoutButton .btn:hover {
             background-color: #046446;
         }
-
+.cartProducts tr td{
+    padding:5px;
+}
 .cartProducts .btn {
     background-color: #059669;
     color: white;
@@ -716,7 +718,7 @@ body {
     font-weight: 900;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 8px 16px;
+    padding: 3px 10px;
     border: 1px solid #059669;
     border-radius: 3px;
 }
