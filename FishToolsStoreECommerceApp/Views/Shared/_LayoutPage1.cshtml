@@ -44,11 +44,11 @@
     <div class="boxedlayout">
         <div class="header">
             <div class="left logo">
-                <img src="~/Assets/PageImages/fishtools-logo.png" />
+                <a href="@Url.Action("Index","Home")"><img src="~/Assets/PageImages/fishtools-logo.png" /></a>
             </div>
             <div class="right phoneAndCart">
                 <a href="" class="phone">+90222 220 25 76</a>
-                <a href="" class="cart">Sepetim (@count) </a>
+                <a href="@Url.Action("Index","ShoppingCart")" class="cart">Sepetim (@count) </a>
             </div>
             <div style="clear:both"></div>
         </div>
