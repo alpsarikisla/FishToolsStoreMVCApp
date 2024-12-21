@@ -477,7 +477,7 @@ body {
             width:50px;
         }
    
-        .favoriteProducts a {
+        .favoriteProducts .btnfav {
             color: #059669;
             font-weight: 900;
             text-decoration: none;
@@ -487,10 +487,10 @@ body {
             border-radius: 3px;
         }
 
-        .favoriteProducts a:hover {
-            background-color: #059669;
-            color: white;
-        }
+    .favoriteProducts .btnfav:hover {
+        background-color: #059669;
+        color: white;
+    }
 
 .emptyFavorites {
     color: #121331;
@@ -513,9 +513,14 @@ body {
     float: left;
     padding-left:20px;
 }
-.btndel{
-    margin-left:20px;
-    margin-right:-40px;
+.btndel {
+    margin-left: 10px;
+    margin-right: -40px;
+    color: #059669;
+    text-decoration: none;
+    border: 1px solid #059669;
+    padding: 3px 10px;
+    border-radius: 3px;
 }
 .btndel:hover{
     color:white;

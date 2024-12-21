@@ -41,8 +41,8 @@
                         <td style="text-align:center"><img src="~/Assets/ProductImages/@item.Product.Image" /></td>
                         <td>@item.Product.Name</td>
                         <td>@item.Product.Price,00 ₺</td>
-                        <td style="text-align:center"><a href="@Url.Action("Detail", "Product", new { id = item.ID })" >Ürün'e git</a></td>
-                        <td>
+                        <td style="text-align:center"><a href="@Url.Action("Detail", "Product", new { id = item.ID })" class="btnfav">Ürün'e git</a></td>
+                        <td width="20%">
                             <input type="number" style="width:50px;font-size:15pt;" value="@item.Quantity" /> 
                             <a href="@Url.Action("DeleteFromCart", "ShoppingCart", new { id = item.ID })" class="btndel">X</a>
                         </td>

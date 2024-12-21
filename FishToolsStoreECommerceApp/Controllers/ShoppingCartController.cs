@@ -22,15 +22,15 @@ namespace FishToolsStoreECommerceApp.Controllers
                 return RedirectToAction("Index", "Login");
             }
         }
-
-        public ActionResult AddToCart(int id)
+        [HttpPost]
+        public ActionResult AddToCart(int? id, int quantity)
         {
             if (Session["user"] != null)
             {
                 ShoppingCart sc = new ShoppingCart();
                 sc.Member_ID = (Session["user"] as Member).ID;
-                sc.Product_ID = id;
-                sc.Quantity = 1;
+                sc.Product_ID = Convert.ToInt32(id);
+                sc.Quantity = quantity;
                 db.ShoppingCarts.Add(sc);
                 db.SaveChanges();
             }

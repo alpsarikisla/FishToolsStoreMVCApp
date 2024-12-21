@@ -63,8 +63,9 @@
             <div class="detailquantity">
                 @using (Html.BeginForm("AddToCart", "ShoppingCart", FormMethod.Post))
                 {
+                    @Html.HiddenFor(x => x.ID);
                     <input type="number" name="quantity" class="quantity" value="1" />
-                    <a href="@Url.Action("AddToCart","ShoppingCart",new {id = Model.ID})" class="addtoCart">Sepete Ekle</a>
+                    <input type="submit" class="addtoCart" value="Sepete Ekle" />
                 }
             </div>
 
