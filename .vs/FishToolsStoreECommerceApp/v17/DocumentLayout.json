@@ -3,6 +3,7 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   "WorkspaceRootPath": "C:\\Users\\serap\\Belgeler\\GitHub\\FishToolsStoreMVCApp\\",
   "Documents": [
     {
@@ -19,6 +20,12 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|C:\\Users\\serap\\Belgeler\\GitHub\\FishToolsStoreMVCApp\\fishtoolsstoreecommerceapp\\views\\shoppingcart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+=======
+  "WorkspaceRootPath": "C:\\Users\\303\\Documents\\GitHub\\FishToolsStoreMVCApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|c:\\users\\303\\documents\\github\\fishtoolsstoremvcapp\\fishtoolsstoreecommerceapp\\views\\shoppingcart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+>>>>>>> Stashed changes
 =======
   "WorkspaceRootPath": "C:\\Users\\303\\Documents\\GitHub\\FishToolsStoreMVCApp\\",
   "Documents": [
@@ -85,8 +92,13 @@
       "DocumentGroups": [
         {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
           "DockedWidth": 2913,
           "SelectedChildIndex": 3,
+=======
+          "DockedWidth": 184,
+          "SelectedChildIndex": 2,
+>>>>>>> Stashed changes
           "Children": [
             {
               "$type": "Bookmark",
@@ -95,6 +107,22 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+<<<<<<< Updated upstream
+=======
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\303\\Documents\\GitHub\\FishToolsStoreMVCApp\\FishToolsStoreECommerceApp\\Views\\ShoppingCart\\Index.cshtml",
+              "RelativeDocumentMoniker": "FishToolsStoreECommerceApp\\Views\\ShoppingCart\\Index.cshtml",
+              "ToolTip": "C:\\Users\\303\\Documents\\GitHub\\FishToolsStoreMVCApp\\FishToolsStoreECommerceApp\\Views\\ShoppingCart\\Index.cshtml",
+              "RelativeToolTip": "FishToolsStoreECommerceApp\\Views\\ShoppingCart\\Index.cshtml",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAACIAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-20T07:48:13.25Z",
+              "EditorCaption": ""
+>>>>>>> Stashed changes
             },
             {
               "$type": "Document",
@@ -181,8 +209,9 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "ShoppingCartController.cs",
-              "DocumentMoniker": "C:\\Users\\serap\\Belgeler\\GitHub\\FishToolsStoreMVCApp\\FishToolsStoreECommerceApp\\Controllers\\ShoppingCartController.cs",
+              "DocumentMoniker": "C:\\Users\\303\\Documents\\GitHub\\FishToolsStoreMVCApp\\FishToolsStoreECommerceApp\\Controllers\\ShoppingCartController.cs",
               "RelativeDocumentMoniker": "FishToolsStoreECommerceApp\\Controllers\\ShoppingCartController.cs",
+<<<<<<< Updated upstream
               "ToolTip": "C:\\Users\\serap\\Belgeler\\GitHub\\FishToolsStoreMVCApp\\FishToolsStoreECommerceApp\\Controllers\\ShoppingCartController.cs",
 =======
               "Title": "ShoppingCartController.cs",
@@ -299,11 +328,16 @@
               "Title": "ShoppingCartController.cs",
               "DocumentMoniker": "C:\\Users\\303\\Documents\\GitHub\\FishToolsStoreMVCApp\\FishToolsStoreECommerceApp\\Controllers\\ShoppingCartController.cs",
               "RelativeDocumentMoniker": "FishToolsStoreECommerceApp\\Controllers\\ShoppingCartController.cs",
+=======
+>>>>>>> Stashed changes
               "ToolTip": "C:\\Users\\303\\Documents\\GitHub\\FishToolsStoreMVCApp\\FishToolsStoreECommerceApp\\Controllers\\ShoppingCartController.cs",
               "RelativeToolTip": "FishToolsStoreECommerceApp\\Controllers\\ShoppingCartController.cs",
               "ViewState": "AgIAAB4AAAAAAAAAAAAmwH4AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-20T07:25:37.544Z"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
             }
           ]
