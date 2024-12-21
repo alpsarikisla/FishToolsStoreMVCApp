@@ -1,6 +1,7 @@
 {
   "Version": 1,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   "WorkspaceRootPath": "C:\\Users\\serap\\Belgeler\\GitHub\\FishToolsStoreMVCApp\\",
   "Documents": [
     {
@@ -53,6 +54,21 @@
       "AbsoluteMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|c:\\users\\303\\documents\\github\\fishtoolsstoremvcapp\\fishtoolsstoreecommerceapp\\assets\\css\\uimainstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|solutionrelative:fishtoolsstoreecommerceapp\\assets\\css\\uimainstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
 >>>>>>> Stashed changes
+=======
+  "WorkspaceRootPath": "C:\\Users\\303\\Documents\\GitHub\\FishToolsStoreMVCApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|c:\\users\\303\\documents\\github\\fishtoolsstoremvcapp\\fishtoolsstoreecommerceapp\\views\\product\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|solutionrelative:fishtoolsstoreecommerceapp\\views\\product\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|c:\\users\\303\\documents\\github\\fishtoolsstoremvcapp\\fishtoolsstoreecommerceapp\\controllers\\shoppingcartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|solutionrelative:fishtoolsstoreecommerceapp\\controllers\\shoppingcartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|c:\\users\\303\\documents\\github\\fishtoolsstoremvcapp\\fishtoolsstoreecommerceapp\\assets\\css\\uimainstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|solutionrelative:fishtoolsstoreecommerceapp\\assets\\css\\uimainstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+>>>>>>> Stashed changes
     }
   ],
   "DocumentGroupContainers": [
@@ -75,6 +91,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
               "Title": "UIMainStyle.css",
               "DocumentMoniker": "C:\\Users\\serap\\Belgeler\\GitHub\\FishToolsStoreMVCApp\\FishToolsStoreECommerceApp\\Assets\\css\\UIMainStyle.css",
@@ -160,6 +177,29 @@
               "WhenOpened": "2024-12-15T08:49:23.329Z"
 =======
               "WhenOpened": "2024-12-21T07:25:22.061Z",
+=======
+              "Title": "ShoppingCartController.cs",
+              "DocumentMoniker": "C:\\Users\\303\\Documents\\GitHub\\FishToolsStoreMVCApp\\FishToolsStoreECommerceApp\\Controllers\\ShoppingCartController.cs",
+              "RelativeDocumentMoniker": "FishToolsStoreECommerceApp\\Controllers\\ShoppingCartController.cs",
+              "ToolTip": "C:\\Users\\303\\Documents\\GitHub\\FishToolsStoreMVCApp\\FishToolsStoreECommerceApp\\Controllers\\ShoppingCartController.cs",
+              "RelativeToolTip": "FishToolsStoreECommerceApp\\Controllers\\ShoppingCartController.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwCAAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T07:25:22.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "C:\\Users\\303\\Documents\\GitHub\\FishToolsStoreMVCApp\\FishToolsStoreECommerceApp\\Views\\Product\\Detail.cshtml",
+              "RelativeDocumentMoniker": "FishToolsStoreECommerceApp\\Views\\Product\\Detail.cshtml",
+              "ToolTip": "C:\\Users\\303\\Documents\\GitHub\\FishToolsStoreMVCApp\\FishToolsStoreECommerceApp\\Views\\Product\\Detail.cshtml",
+              "RelativeToolTip": "FishToolsStoreECommerceApp\\Views\\Product\\Detail.cshtml",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAAEAAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-21T07:24:44.079Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             },
             {
@@ -179,6 +219,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
               "Title": "Favorites.cshtml",
               "DocumentMoniker": "C:\\Users\\serap\\Belgeler\\GitHub\\FishToolsStoreMVCApp\\FishToolsStoreECommerceApp\\Views\\Product\\Favorites.cshtml",
@@ -213,6 +254,8 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-12-17T20:05:50.975Z",
 =======
+=======
+>>>>>>> Stashed changes
               "Title": "UIMainStyle.css",
               "DocumentMoniker": "C:\\Users\\303\\Documents\\GitHub\\FishToolsStoreMVCApp\\FishToolsStoreECommerceApp\\Assets\\css\\UIMainStyle.css",
               "RelativeDocumentMoniker": "FishToolsStoreECommerceApp\\Assets\\css\\UIMainStyle.css",
@@ -221,6 +264,9 @@
               "ViewState": "AQIAAPwBAAAAAAAAAAAAAAkCAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-12-21T07:21:19.894Z",
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
               "EditorCaption": ""
             }
