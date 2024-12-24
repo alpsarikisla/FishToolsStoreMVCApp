@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -141,5 +142,28 @@ namespace FishToolsStoreECommerceApp.Controllers
 
             return RedirectToAction("Index");
         }
+
+        public ActionResult RedirectToCheckout()
+        {
+            if (Session["user"] != null)
+            {
+                int memberId = (Session["user"] as Member).ID;
+
+                List<ShoppingCart> cart = db.ShoppingCarts
+                                  .Where(s => s.Member_ID == memberId)
+                                  .Include(s => s.Product)
+                                  .ToList();
+
+                Session["Cart"] = cart;
+                return RedirectToAction("Index", "Order");
+            }
+            else
+            {
+                return RedirectToAction("Index", "Login");
+            }
+        }
+
     }
+    
+    
 }

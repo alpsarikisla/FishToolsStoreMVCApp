@@ -1,0 +1,74 @@
+﻿@model List<FishToolsStoreECommerceApp.Models.ShoppingCart>
+@using FishToolsStoreECommerceApp.Models
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    List<ShoppingCart> cart = ViewBag.cart as List<ShoppingCart>;
+}
+
+<div class="paymentContent">
+    <div class="paymentContainer">
+        <div class="right">
+            <div class="headerpay">Ödeme Bilgileri</div>
+            <form class="paymentForm">
+                <div class="row">
+                    <label>Kart Sahibinin Adı</label>
+                    <input type="text" placeholder="Kart Üzerindeki İsim" required>
+                </div>
+                <div class="row">
+                    <label>Kart Numarası</label>
+                    <input type="text" placeholder="XXXX XXXX XXXX XXXX" required>
+                </div>
+                <div class="row">
+                    <label>Son Kullanma Tarihi</label>
+                    <input type="text" placeholder="MM/YY" required>
+                </div>
+                <div class="row">
+                    <label>CVV</label>
+                    <input type="text" placeholder="XXX" required>
+                </div>
+                <button type="submit" class="submitButton">Ödeme Yap</button>
+            </form>
+        </div>
+
+        <div class="left">
+            <div class="orderSummary">
+                <h3>Sipariş Özeti</h3>
+
+                @if (ViewBag.Cart != null)
+                {
+                    decimal toplamFiyatKDVHaric = 0;
+                    decimal toplamKDV = 0;
+
+                    foreach (var item in cart)
+                    {
+                        decimal urunFiyatiKDVDahil = (decimal)item.Product.Price * 1.2m;
+                        decimal urunToplamKDVDahil = urunFiyatiKDVDahil * item.Quantity;
+
+                        toplamFiyatKDVHaric += (decimal)item.Product.Price * item.Quantity;
+                        toplamKDV += urunToplamKDVDahil - (decimal)item.Product.Price * item.Quantity;
+
+                        <div class="order">
+                            <span>Ürün Adı: @item.Product.Name</span>
+                            <span style="margin-left: 20px;">Miktar: @item.Quantity</span>
+                        </div>
+                        <div class="order">
+                            <span style="margin-left:5px;">Ara Toplam (KDV Dahil): @urunToplamKDVDahil ₺</span>
+                        </div>
+                    }
+                    <div class="order total">
+                        <strong>Toplam Fiyat (KDV Dahil): </strong>
+                        @{
+                            decimal toplamFiyatKDVDahil = toplamFiyatKDVHaric * 1.2m;
+                        }
+                        <span style="margin-left:5px;">@toplamFiyatKDVDahil ₺</span>
+                    </div>
+                }
+                else
+                {
+                    <p>Sepetinizde ürün bulunmamaktadır.</p>
+                }
+            </div>
+        </div>
+    </div>
+</div>

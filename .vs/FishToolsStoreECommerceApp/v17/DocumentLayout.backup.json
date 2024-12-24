@@ -3,11 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\serap\\Belgeler\\GitHub\\FishToolsStoreMVCApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|c:\\users\\serap\\belgeler\\github\\fishtoolsstoremvcapp\\fishtoolsstoreecommerceapp\\views\\shoppingcart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|solutionrelative:fishtoolsstoreecommerceapp\\views\\shoppingcart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|C:\\Users\\serap\\Belgeler\\GitHub\\FishToolsStoreMVCApp\\fishtoolsstoreecommerceapp\\controllers\\shoppingcartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|c:\\users\\serap\\belgeler\\github\\fishtoolsstoremvcapp\\fishtoolsstoreecommerceapp\\controllers\\shoppingcartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{06F13421-00A4-4B95-B1DB-9C6A6A365FD6}|FishToolsStoreECommerceApp\\FishToolsStoreECommerceApp.csproj|solutionrelative:fishtoolsstoreecommerceapp\\controllers\\shoppingcartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -17,33 +13,24 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 184,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 2245,
+          "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\serap\\Belgeler\\GitHub\\FishToolsStoreMVCApp\\FishToolsStoreECommerceApp\\Views\\ShoppingCart\\Index.cshtml",
-              "RelativeDocumentMoniker": "FishToolsStoreECommerceApp\\Views\\ShoppingCart\\Index.cshtml",
-              "ToolTip": "C:\\Users\\serap\\Belgeler\\GitHub\\FishToolsStoreMVCApp\\FishToolsStoreECommerceApp\\Views\\ShoppingCart\\Index.cshtml",
-              "RelativeToolTip": "FishToolsStoreECommerceApp\\Views\\ShoppingCart\\Index.cshtml",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAADsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-20T07:48:13.25Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ShoppingCartController.cs",
               "DocumentMoniker": "C:\\Users\\serap\\Belgeler\\GitHub\\FishToolsStoreMVCApp\\FishToolsStoreECommerceApp\\Controllers\\ShoppingCartController.cs",
               "RelativeDocumentMoniker": "FishToolsStoreECommerceApp\\Controllers\\ShoppingCartController.cs",
               "ToolTip": "C:\\Users\\serap\\Belgeler\\GitHub\\FishToolsStoreMVCApp\\FishToolsStoreECommerceApp\\Controllers\\ShoppingCartController.cs",
               "RelativeToolTip": "FishToolsStoreECommerceApp\\Controllers\\ShoppingCartController.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAmwH4AAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T07:25:37.544Z",
+              "WhenOpened": "2024-12-24T09:04:42.725Z",
               "EditorCaption": ""
             }
           ]

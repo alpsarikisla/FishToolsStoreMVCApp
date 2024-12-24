@@ -122,6 +122,8 @@
     <Compile Include="Areas\ManagerPanel\Controllers\HomeController.cs" />
     <Compile Include="Areas\ManagerPanel\Controllers\LoginController.cs" />
     <Compile Include="Areas\ManagerPanel\Controllers\MemberController.cs" />
+    <Compile Include="Areas\ManagerPanel\Controllers\OrderController.cs" />
+    <Compile Include="Areas\ManagerPanel\Controllers\OrderDetailController.cs" />
     <Compile Include="Areas\ManagerPanel\Controllers\ProductController.cs" />
     <Compile Include="Areas\ManagerPanel\Controllers\SystemMessagesController.cs" />
     <Compile Include="Areas\ManagerPanel\Data\ViewModels\ManagerLoginViewModel.cs" />
@@ -130,6 +132,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MemberController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
@@ -143,6 +146,8 @@
     <Compile Include="Models\FishToolsStoreModel.cs" />
     <Compile Include="Models\Manager.cs" />
     <Compile Include="Models\Member.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderDetail.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ShoppingCart.cs" />
     <Compile Include="Models\SystemHelpers.cs" />
@@ -173,6 +178,8 @@
     <Content Include="Areas\ManagerPanel\Views\Member\Index.cshtml" />
     <Content Include="Areas\ManagerPanel\Views\Member\AllIndex.cshtml" />
     <Content Include="Areas\ManagerPanel\Views\Member\Delete.cshtml" />
+    <Content Include="Areas\ManagerPanel\Views\Order\Index.cshtml" />
+    <Content Include="Areas\ManagerPanel\Views\OrderDetail\Index.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\_LayoutPage1.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
@@ -182,6 +189,7 @@
     <Content Include="Views\Product\Favorites.cshtml" />
     <Content Include="Views\ShoppingCart\Index.cshtml" />
     <Content Include="Views\Member\Edit.cshtml" />
+    <Content Include="Views\Order\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

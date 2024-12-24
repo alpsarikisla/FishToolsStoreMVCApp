@@ -1,0 +1,50 @@
+﻿@model IEnumerable<FishToolsStoreECommerceApp.Models.OrderDetail>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/ManagerPanel/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="breadCrumb">
+    <a href="@Url.Action("Index", "Home")">Anasayfa</a> >
+    <a href="@Url.Action("Index", "Order")">Siparişler</a> >
+    <label>Sipariş Detayları</label>
+</div>
+
+<div class="pageContent">
+    <div class="pagetitle">
+        <h2>Satış Detayları</h2>
+        <div style="clear:both"></div>
+    </div>
+    <div class="tableContent">
+        <table class="table">
+            <tr>
+                <th style="border-left:none">Sipariş No</th>
+                <th>Ürün Adı</th>
+                <th>Birim Fiyat</th>
+                <th>Miktar</th>
+                <th>İndirim Oranı</th>
+                <th>Seçenekler</th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td style="border-left:none">@item.OrderID</td>
+                    <td>@item.Product.Name</td>
+                    <td>@item.UnitPrice)</td>
+                    <td>@item.Quantity</td>
+                    <td>@item.Discount)</td>
+                    <td>
+                        <a href="" class="btnedit">Düzenle</a>
+                        <a href="" class="btndelete">Sil</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+@section styles
+{
+    <link href="~/Areas/ManagerPanel/Assets/css/TableStyle.css" rel="stylesheet" />
+}
+

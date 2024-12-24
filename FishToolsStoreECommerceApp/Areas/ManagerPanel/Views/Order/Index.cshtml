@@ -1,0 +1,89 @@
+﻿@model IEnumerable<FishToolsStoreECommerceApp.Models.Order>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/ManagerPanel/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="breadCrumb">
+    <a href="@Url.Action("Index", "Home")">Anasayfa</a> >
+    <label>Siparişler</label>
+</div>
+
+<div class="pageContent">
+    <div class="pagetitle">
+        <h2>Sipariş Listesi</h2>
+        <div style="clear:both"></div>
+    </div>
+    <div class="tableContent">
+        <table class="table">
+            <tr>
+                <th style="border-left:none">
+                    Sipariş No
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MemberID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OrderDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RequiredDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ShipName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ShipAddress)
+                </th>
+                <th>
+                    Durum
+                </th>
+                <th>Seçenekler</th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td style="border-left:none">@item.OrderID</td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MemberID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OrderDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RequiredDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ShipName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ShipAddress)
+                    </td>
+                    <td>
+                        @if (item.IsActive)
+                        {
+                            <label>Aktif</label>
+                        }
+                        else
+                        {
+                            <label>Pasif</label>
+                        }
+                    </td>
+                    <td>
+                        <a href="" class="btnedit">Düzenle</a>
+                        <a href="" class="btndelete">Sil</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="tablefooter">
+        <a href="">Tüm Siparişleri Listele</a>
+    </div>
+</div>
+
+@section styles
+{
+    <link href="~/Areas/ManagerPanel/Assets/css/TableStyle.css" rel="stylesheet" />
+}

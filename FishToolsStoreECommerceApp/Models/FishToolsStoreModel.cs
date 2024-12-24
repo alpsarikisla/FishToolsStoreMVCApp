@@ -21,6 +21,8 @@ namespace FishToolsStoreECommerceApp.Models
         public DbSet<Member> Members { get; set; }
         public DbSet<Favorites> Favorites { get; set; }
         public DbSet<ShoppingCart> ShoppingCarts { get; set; }
+        public DbSet<Order> Order { get; set; }
+        public DbSet<OrderDetail> OrderDetail { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

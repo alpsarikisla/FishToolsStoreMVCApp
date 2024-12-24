@@ -81,6 +81,7 @@ namespace FishToolsStoreECommerceApp.Models
         public bool IsDeleted { get; set; }
         public virtual ICollection<Favorites> Favorites { get; set; }
         public virtual ICollection<ShoppingCart> ShoppingCart { get; set; }
+        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
 
     }
 }
