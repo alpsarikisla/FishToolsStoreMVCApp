@@ -1,0 +1,91 @@
+﻿@model FishToolsStoreECommerceApp.Data.ViewModels.PaymentViewModel
+@using FishToolsStoreECommerceApp.Models
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    List<ShoppingCart> c = TempData["cart"] as List<ShoppingCart>;
+    double TotalAmount = 0;
+}
+
+<div class="Paymentcontainer">
+    @using (Html.BeginForm("Payment", "Checkout", FormMethod.Post))
+    {
+        <div class="Paymentcontent">
+            @Html.AntiForgeryToken()
+
+            <h2>Kart Bilgileri</h2>
+
+            <div class="row">
+                @Html.LabelFor(m => m.CardNumber)
+                @Html.ValidationMessageFor(m => m.CardNumber, "", new { @class = "text-danger" })
+                @Html.TextBoxFor(m => m.CardNumber, new { @class = "form-control", type = "text", placeholder = "XXXX XXXX XXXX XXXX", maxlength = 16 })
+            </div>
+            <div class="dropdownrow">
+                @Html.LabelFor(m => m.ExpirationMonth)
+                @Html.ValidationMessageFor(m => m.ExpirationMonth, "", new { @class = "text-danger" })
+                @Html.DropDownListFor(m => m.ExpirationMonth, (SelectList)ViewBag.Months, "Ay", new { @class = "form-control" })
+
+                @Html.LabelFor(m => m.ExpirationYear)
+                @Html.ValidationMessageFor(m => m.ExpirationYear, "", new { @class = "text-danger" })
+                @Html.DropDownListFor(m => m.ExpirationYear, (SelectList)ViewBag.Years, "Yıl", new { @class = "form-control" })
+
+                @Html.LabelFor(m => m.CVV)
+                @Html.ValidationMessageFor(m => m.CVV, "", new { @class = "text-danger" })
+                @Html.TextBoxFor(m => m.CVV, new { @class = "form-control", type = "text", placeholder = "XXX", maxlength = 3 })
+            </div>
+
+            <h2>Fatura Bilgileri</h2>
+
+            <div class="row">
+                @Html.LabelFor(m => m.FullName)
+                @Html.ValidationMessageFor(m => m.FullName, "", new { @class = "text-danger" })
+                @Html.TextBoxFor(m => m.FullName, new { @class = "form-control" })
+            </div>
+            <div class="row">
+                @Html.LabelFor(m => m.City)
+                @Html.ValidationMessageFor(m => m.City, "", new { @class = "text-danger" })
+                @Html.TextBoxFor(m => m.City, new { @class = "form-control" })
+            </div>
+            <div class="row">
+                @Html.LabelFor(m => m.PostalCode)
+                @Html.ValidationMessageFor(m => m.PostalCode, "", new { @class = "text-danger" })
+                @Html.TextBoxFor(m => m.PostalCode, new { @class = "form-control" })
+            </div>
+            <div class="row">
+                @Html.LabelFor(m => m.Address)
+                @Html.ValidationMessageFor(m => m.Address, "", new { @class = "text-danger" })
+                @Html.TextBoxFor(m => m.Address, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="Ordercontent">
+            <h2>Sipariş Bilgileri</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ürün Adı</th>
+                        <th>Adet</th>
+                        <th style="border-right:1px solid silver">Birim Fiyat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in c)
+                    {
+                        <tr>
+                            <td>@item.Product.Name</td>
+                            <td>@item.Quantity</td>
+                            <td style="border-right:1px solid silver">@item.Product.Price</td>
+                        </tr>
+                        TotalAmount += (item.Product.Price * item.Quantity);
+                    }
+                </tbody>
+            </table>
+            <h3>Toplam Tutar</h3>
+            <div style="clear:both"></div>
+            <h4>@TotalAmount</h4>
+            <input type="submit" value="Ödeme Yap" />
+
+        </div>
+        <div style="clear:both"></div>
+    }
+</div>
