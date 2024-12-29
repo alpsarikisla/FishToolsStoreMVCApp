@@ -1,0 +1,71 @@
+﻿@model IEnumerable<FishToolsStoreECommerceApp.Models.Order>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/ManagerPanel/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="breadCrumb">
+    <a href="@Url.Action("Index", "Home")">Anasayfa</a>
+    <label>Siparişler</label>
+</div>
+
+<div class="pageContent">
+    <div class="pagetitle">
+        <h2>Sipariş Listesi</h2>
+        <div style="clear:both"></div>
+    </div>
+    <div class="tableContent">
+        <table class="table">
+            <tr>
+                <th style="border-left:none">
+                    Sipariş No
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Member_ID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Shipper)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OrderDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DeliveryDate)
+                </th>
+                <th>Seçenekler</th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td style="border-left:none">@item.Order_ID</td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Member_ID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Shipper.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OrderDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DeliveryDate)
+                    </td>
+                    <td>
+                        <a href="@Url.Action("OrderDetails","Order", new {id=item.Order_ID})" class="btndetail">Detay</a>
+                    </td>
+                </tr>
+            }
+        </table>
+
+    </div>
+    <div class="tablefooter">
+        <a href="@Url.Action("AllIndex","Order")">Tüm Siparişleri Listele</a>
+    </div>
+</div>
+
+@section styles
+{
+    <link href="~/Areas/ManagerPanel/Assets/css/TableStyle.css" rel="stylesheet" />
+}

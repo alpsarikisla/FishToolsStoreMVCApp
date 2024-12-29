@@ -153,6 +153,7 @@ namespace FishToolsStoreECommerceApp.Areas.ManagerPanel.Controllers
             }
             return View(prod);
         }
+
         public ActionResult ReDelete(int? id)
         {
             if (id == null)

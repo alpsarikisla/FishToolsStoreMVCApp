@@ -179,10 +179,12 @@ body {
 
             .mainBase .productBase .product .image {
                 margin-top: 10px;
+                height: 200px;
             }
 
                 .mainBase .productBase .product .image img {
                     width: 100%;
+                    height: 100%;
                 }
 
             .mainBase .productBase .product .name {
@@ -283,45 +285,53 @@ body {
             background-color: #efefef;
             border-radius: 5px;
             padding: 10px;
+            word-wrap: break-word;
         }
 
         .detailBase .detail .detailCategory {
             margin-top: 15px;
-            color:dimgrey
-        }
-        .detailBase .detail .detailCategory a {
-           color:#046446;
-           text-decoration:none;
+            color: dimgrey
         }
 
+            .detailBase .detail .detailCategory a {
+                color: #046446;
+                text-decoration: none;
+            }
+
         .detailBase .detail .detailquantity {
-            margin-top:15px;
+            margin-top: 15px;
         }
+
             .detailBase .detail .detailquantity .quantity {
-                padding:10px;
+                padding: 10px;
             }
+
             .detailBase .detail .detailquantity .addtoCart {
-                padding:12px;
-                background-color:#059669;
-                color:white;
-                border:none;
-                width:250px;
-                border-radius:3px;
+                padding: 12px;
+                background-color: #059669;
+                color: white;
+                border: none;
+                width: 250px;
+                border-radius: 3px;
             }
-            .detailBase .detail .detailquantity .addtoCart:hover {
-                background-color:#046446;
-                cursor:pointer;
-            }
-        .detailBase .detaildescription{
-            margin-top:50px;
-            padding:20px;
-            color:dimgrey;
-            padding-top:0;
-        }
-    .detailBase .detaildescription h3{
-        padding-bottom:15px;
-        color:#121331;
+
+                .detailBase .detail .detailquantity .addtoCart:hover {
+                    background-color: #046446;
+                    cursor: pointer;
+                }
+
+    .detailBase .detaildescription {
+        margin-top: 50px;
+        padding: 20px;
+        color: dimgrey;
+        padding-top: 0;
     }
+
+        .detailBase .detaildescription h3 {
+            padding-bottom: 15px;
+            color: #121331;
+        }
+
 .registerForm {
     width: 50%;
     margin: 0 auto;
@@ -330,11 +340,12 @@ body {
     border: 1px solid silver;
     background-color: #ffffff;
     margin-top: 30px;
-    margin-bottom:30px;
+    margin-bottom: 30px;
 }
-    .registerForm h2{
-        text-align:center;
-        font-size:20pt;
+
+    .registerForm h2 {
+        text-align: center;
+        font-size: 20pt;
     }
 
     .registerForm .row {
@@ -387,6 +398,7 @@ body {
     border: 1px solid #c3e6cb;
     border-radius: 5px;
 }
+
 .loginForm {
     padding-top: 20px;
     width: 50%;
@@ -395,7 +407,7 @@ body {
     border-radius: 7px;
     border: 1px solid silver;
     background-color: #ffffff;
-    margin-top:30px;
+    margin-top: 30px;
 }
 
     .loginForm h2 {
@@ -448,6 +460,7 @@ body {
         .loginForm a:hover {
             color: #046446;
         }
+
 .favoriteProducts {
     width: 100%;
     border-collapse: collapse;
@@ -473,18 +486,18 @@ body {
     }
 
         .favoriteProducts td img {
-            width:50px;
+            width: 50px;
         }
-   
-        .favoriteProducts a {
-            color: #059669;
-            font-weight: 900;
-            text-decoration: none;
-            text-transform: uppercase;
-            border: 1px solid #059669;
-            padding: 8px 16px;
-            border-radius: 3px;
-        }
+
+    .favoriteProducts a {
+        color: #059669;
+        font-weight: 900;
+        text-decoration: none;
+        text-transform: uppercase;
+        border: 1px solid #059669;
+        padding: 8px 16px;
+        border-radius: 3px;
+    }
 
         .favoriteProducts a:hover {
             background-color: #059669;
@@ -499,19 +512,22 @@ body {
     text-align: center;
     width: 100%;
 }
-.active{
-    background-color:#059669;
-    color:white !important;
+
+.active {
+    background-color: #059669;
+    color: white !important;
 }
-.active:hover
-{
-    color:#046446 !important;
-}
+
+    .active:hover {
+        color: #046446 !important;
+    }
+
 .favoriteBase {
     width: 910px;
     float: left;
     padding-left: 20px;
 }
+
 .profileBase {
     width: 810px;
     float: left;
@@ -519,13 +535,13 @@ body {
     border-radius: 7px;
     padding: 15px;
     border: 1px solid #ddd;
-    margin-left:40px;
-    margin-bottom:20px;
+    margin-left: 40px;
+    margin-bottom: 20px;
 }
 
     .profileBase h2 {
         color: #121331;
-        text-align:center;
+        text-align: center;
         font-size: 15pt;
         font-weight: 900;
         margin-bottom: 15px;
@@ -551,14 +567,14 @@ body {
     }
 
     .profileBase .text-danger {
-        font-size: 11pt; 
-        color:red;
+        font-size: 11pt;
+        color: red;
     }
 
 .successMessage,
 .warningMessage {
     padding: 12px;
-    margin: 15px 0; 
+    margin: 15px 0;
     border-radius: 5px;
 }
 
@@ -579,7 +595,7 @@ body {
     color: white;
     padding: 10px 15px;
     border-radius: 5px;
-    font-size: 14pt; 
+    font-size: 14pt;
     width: 100%;
     border: none;
     cursor: pointer;
@@ -588,11 +604,12 @@ body {
     .profileBase .btn:hover {
         background-color: #046446;
     }
+
 .cartBase {
     width: 910px;
     float: left;
     padding-left: 20px;
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
 
 .cartProducts {
@@ -696,9 +713,11 @@ body {
         .checkoutButton .btn:hover {
             background-color: #046446;
         }
-.cartProducts tr td{
-    padding:5px;
+
+.cartProducts tr td {
+    padding: 5px;
 }
+
 .cartProducts .btn {
     background-color: #059669;
     color: white;
@@ -727,5 +746,118 @@ body {
         background-color: #059669;
         color: white;
     }
-    
 
+.Paymentcontainer {
+    margin-top: 20px;
+}
+
+.Paymentcontent {
+    float: left;
+    width: 55%;
+    border: 1px solid silver;
+    padding: 20px;
+    padding-bottom: 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+    .Paymentcontent .text-danger {
+        font-size: 11pt;
+        color: red;
+    }
+
+    .Paymentcontent .row {
+        margin-bottom: 15px;
+    }
+
+.dropdownrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 15px;
+    margin-left: 3px;
+}
+
+    .dropdownrow .form-control {
+        width: 120px;
+    }
+
+.Paymentcontent h2 {
+    margin-bottom: 20px;
+    color: #059669;
+}
+
+.Paymentcontent label {
+    display: block;
+    margin-bottom: 5px;
+    margin-left: 2px;
+}
+
+.Paymentcontent .form-control {
+    width: 95%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.Ordercontent {
+    float: right;
+    width: 35%;
+    border: 1px solid silver;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+    .Ordercontent h2 {
+        color: #059669;
+        margin-bottom: 20px;
+    }
+
+    .Ordercontent h3 {
+        float: right;
+    }
+
+    .Ordercontent h4 {
+        float: right;
+    }
+
+    .Ordercontent table {
+        margin-bottom: 10px;
+        width: 100%;
+        border-spacing: 0px;
+    }
+
+        .Ordercontent table tr th {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid silver;
+            border-bottom: 2px solid silver;
+            border-right: none;
+        }
+
+        .Ordercontent table tr td {
+            padding: 10px;
+            border-bottom: 1px solid Silver;
+            border-left: 1px solid silver;
+        }
+
+
+
+    .Ordercontent input[type="submit"] {
+        margin-top: 10px;
+        width: 100%;
+        padding: 15px;
+        background: #059669;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+        .Ordercontent input[type="submit"]:hover {
+            background: #046446;
+        }

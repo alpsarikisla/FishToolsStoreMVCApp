@@ -36,8 +36,8 @@ namespace FishToolsStoreECommerceApp.Controllers
             {
                 int memberId = (Session["user"] as Member).ID;
 
-                Product product = db.Products.Find(id); 
-                if (product == null || product.Stock < quantity) 
+                Product product = db.Products.Find(id);
+                if (product == null || product.Stock < quantity)
                 {
                     ViewBag.Error = $"Üzgünüz, '{product?.Name}' ürünü için yeterli stok yok.";
                     return View("Index", db.ShoppingCarts.Where(s => s.Member_ID == memberId).Include(s => s.Product).ToList());
@@ -101,13 +101,13 @@ namespace FishToolsStoreECommerceApp.Controllers
                 int memberId = (Session["user"] as Member).ID;
 
                 ShoppingCart cart = db.ShoppingCarts.FirstOrDefault(s => s.Member_ID == memberId && s.Product_ID == productId);
-                Product product = db.Products.Find(productId); 
+                Product product = db.Products.Find(productId);
 
                 if (cart != null && product != null)
                 {
                     if (increase)
                     {
-                        if (cart.Quantity + 1 > product.Stock) 
+                        if (cart.Quantity + 1 > product.Stock)
                         {
                             ViewBag.Error = $"Üzgünüz, '{product.Name}' ürünü için yeterli stok yok.";
                             return View("Index", db.ShoppingCarts.Where(s => s.Member_ID == memberId).Include(s => s.Product).ToList());
@@ -140,6 +140,21 @@ namespace FishToolsStoreECommerceApp.Controllers
             }
 
             return RedirectToAction("Index");
+        }
+
+        public ActionResult Checkout()
+        {
+            if (Session["user"] == null)
+            {
+                return RedirectToAction("Index", "Login");
+            }
+
+            int id = ((Member)Session["user"]).ID;
+
+            List<ShoppingCart> cart = db.ShoppingCarts.Where(x => x.Member_ID == id).ToList();
+            TempData["cart"] = cart;
+
+            return RedirectToAction("Index", "Checkout");
         }
     }
 }
