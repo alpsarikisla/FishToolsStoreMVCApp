@@ -12,6 +12,10 @@
     @using (Html.BeginForm("Payment", "Checkout", FormMethod.Post))
     {
         <div class="Paymentcontent">
+            @if (ViewBag.Mesaj != null)
+            {
+                <label>@ViewBag.Mesaj</label>
+            }
             @Html.AntiForgeryToken()
 
             <h2>Kart Bilgileri</h2>
